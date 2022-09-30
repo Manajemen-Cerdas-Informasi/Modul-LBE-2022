@@ -19,6 +19,9 @@
   - [Variabel](#variabel)
   - [Tipe Data](#tipe-data)
   - [Indentasi](#indentasi)
+- [Operator & Ekspresi](#operator_ekspresi)
+  - [Operator](#operator)
+  - [Urutan](#urutan)
 - [Referensi](#referensi)
 
 </br>
@@ -169,6 +172,16 @@ type('a')
 ## <a name="indentasi"></a>Indentasi
 
 Karakter spasi penting untuk bahasa pemrogramman Python. Lebih tepatnya spasi diawal baris atau indentasi. Spasi diawal (baik berupa spasi atau tab) baris logis digunakan untuk menentukan level indentasi, yang akan mempengaruhi pengelompokan statemen.
+
+# <a name="operator_ekspresi"></a>Operator & Ekspresi
+
+## <a name="operator"></a>Operator
+
+<img src="https://user-images.githubusercontent.com/70510279/193294569-18c7dd58-b06a-44c3-b2ba-2b43a6453e86.png" alt="Install Python" width="1000"/>
+
+## <a name="urutan"></a>Urutan
+
+Urutan sama seperti pengerjaan matematika pada umumnya. Misalnya perkalian lebih tinggi dari penjumlahan.
 
 # <a name="referensi"></a>Referensi
 
