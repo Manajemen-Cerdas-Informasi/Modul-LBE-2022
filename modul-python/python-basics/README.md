@@ -18,12 +18,16 @@
   - [Variabel](#variabel)
   - [Tipe Data](#tipe-data)
   - [Indentasi](#indentasi)
-- [Operator & Ekspresi](#operator_ekspresi)
+- [Operator & Statement Conditional](#operator_statement)
   - [Operator](#operator)
-  - [Urutan](#urutan)
-  - [If Else](#if_else)
-  - [While](#while)
-  - [For Loop](#for_loop)
+    - [Urutan](#urutan)
+  - [Statement Conditional](#statement_conditional)
+    - [If Else](#if_else)
+    - [While](#while)
+    - [For Loop](#for_loop)
+- [Fungsi](#fungsi)
+  - [Parameter Fungsi](#parameter_fungsi)
+  - [Variabel Lokal](#variabel-lokal)
 - [Referensi](#referensi)
 
 </br>
@@ -175,17 +179,19 @@ type('a')
 
 Karakter spasi penting untuk bahasa pemrogramman Python. Lebih tepatnya spasi diawal baris atau indentasi. Spasi diawal (baik berupa spasi atau tab) baris logis digunakan untuk menentukan level indentasi, yang akan mempengaruhi pengelompokan statemen.
 
-# <a name="operator_ekspresi"></a>Operator & Ekspresi
+# <a name="operator_statement"></a>Operator & Statement Conditional
 
 ## <a name="operator"></a>Operator
 
 <img src="https://user-images.githubusercontent.com/70510279/193294569-18c7dd58-b06a-44c3-b2ba-2b43a6453e86.png" alt="Install Python" width="1000"/>
 
-## <a name="urutan"></a>Urutan
+### <a name="urutan"></a>Urutan
 
 Urutan sama seperti pengerjaan matematika pada umumnya. Misalnya perkalian lebih tinggi dari penjumlahan.
 
-## <a name="if_else"></a>If Else
+## <a name="statement_conditional"></a>Statement Conditional
+
+### <a name="if_else"></a>If Else
 
 Digunakan untuk mengecek kondisi. Jika kondisi `if` bernilai benar, maka kita akan menjalankan statemen, jika tidak akan diteruskan dengan statemen `else`.
 
@@ -198,7 +204,7 @@ else:
   print "Keluarga Serangga"
 ```
 
-## <a name="while"></a>While
+### <a name="while"></a>While
 
 `While` merupakan statemen untuk perulangan dan akan dijalankan terus menerus selama kondisi benar.
 
@@ -216,7 +222,7 @@ print(sum)
 
 ```
 
-## <a name="for_loop"></a>For Loop
+### <a name="for_loop"></a>For Loop
 
 `For Loop` merupakan statemen untuk perulangan yang memiliki batasan dalam melakukan perulangannya sesuai yang telah ditentukan.
 
@@ -226,6 +232,37 @@ genre = ['dangdut', 'pop', 'indie', 'rock']
 for i in range(len(genre)):
   print("Saya suka musik", genre[i])
 ```
+
+# <a name="fungsi"></a>Fungsi
+
+Fungsi adalah bagian dari program yang dapat digunakan ulang.
+Fungsi dalam Python didefinisikan menggunakan kata kunci `def`. Setelah `def` ada nama pengenal fungsi diikut dengan parameter yang diapit oleh tanda kurung dan diakhir dingan tanda titik dua `:`
+
+```
+def pemain_bola_terbaik():
+  print "Lionel Messi"
+
+pemain_bola_terbaik() # => "Lionel Messi"
+```
+
+## <a name="parameter_fungsi"></a>Parameter Fungsi
+
+Fungsi dapat membaca parameter, parameter adalah nilai yang disediakan kepada fungsi, dimana nilai ini akan menentukan `output` yang akan dihasilkan fungsi.
+
+```
+def cetak_maksimal(a, b):
+    if a > b:
+        print("%s merupakan nilai maksimal" % a)
+    elif a == b:
+        print("%s sama dengan %s" % (a, b))
+    else:
+        print("%s merupakan nilai maksimal" % b)
+
+cetak_maksimal(10, 5)
+
+```
+
+## <a name="variabel_lokal"></a>Variabel Lokal
 
 # <a name="referensi"></a>Referensi
 
