@@ -1,6 +1,5 @@
 # LBE MCI 2022 - Basic Python
 
-- [LBE MCI 2022 - Basic Python](#lbe-mci-2022---basic-python)
 - [Pendahuluan](#pendahuluan)
   - [Apa Itu Python?](#apa-itu-python)
     - [Python](#python)
@@ -22,6 +21,9 @@
 - [Operator & Ekspresi](#operator_ekspresi)
   - [Operator](#operator)
   - [Urutan](#urutan)
+  - [If Else](#if_else)
+  - [While](#while)
+  - [For Loop](#for_loop)
 - [Referensi](#referensi)
 
 </br>
@@ -182,6 +184,48 @@ Karakter spasi penting untuk bahasa pemrogramman Python. Lebih tepatnya spasi di
 ## <a name="urutan"></a>Urutan
 
 Urutan sama seperti pengerjaan matematika pada umumnya. Misalnya perkalian lebih tinggi dari penjumlahan.
+
+## <a name="if_else"></a>If Else
+
+Digunakan untuk mengecek kondisi. Jika kondisi `if` bernilai benar, maka kita akan menjalankan statemen, jika tidak akan diteruskan dengan statemen `else`.
+
+```
+if hewan == "ayam":
+  print "Keluarga Unggas"
+elif hewan == "kambing":
+  print "Keluarga Mamalia"
+else:
+  print "Keluarga Serangga"
+```
+
+## <a name="while"></a>While
+
+`While` merupakan statemen untuk perulangan dan akan dijalankan terus menerus selama kondisi benar.
+
+```
+n = 10
+
+sum = 0
+i = 1
+
+while i <= n:
+  sum = sum + i
+  i = i+1
+
+print(sum)
+
+```
+
+## <a name="for_loop"></a>For Loop
+
+`For Loop` merupakan statemen untuk perulangan yang memiliki batasan dalam melakukan perulangannya sesuai yang telah ditentukan.
+
+```
+genre = ['dangdut', 'pop', 'indie', 'rock']
+
+for i in range(len(genre)):
+  print("Saya suka musik", genre[i])
+```
 
 # <a name="referensi"></a>Referensi
 
