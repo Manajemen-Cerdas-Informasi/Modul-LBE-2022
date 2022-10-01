@@ -28,6 +28,8 @@
 - [Fungsi](#fungsi)
   - [Parameter Fungsi](#parameter_fungsi)
   - [Variabel Lokal](#variabel-lokal)
+  - [Statemen Global](#statemen_global)
+  - [Argumen Default](#argumen_default)
 - [Referensi](#referensi)
 
 </br>
@@ -131,11 +133,11 @@ Salah satu contoh konstanta literal yaitu bilangan seperti `5`, `1.23`, atau str
 > Operator % jika digunakan untuk string bukan berarti modulus melainkan string format.
 
 ```
-print '%s pergi ke %s' % ('ibu', 'pasar')
-print '{0} pergi ke {1}'.format('ibu', 'pasar')
+print("%s pergi ke %s" % ('Kurnia', 'gedung TC'))
+print("{0} pergi ke {1}".format('Bapak', 'kantor'))
 
-print 'jumlah total: %10.3f' % 10.3333
-print 'jumlah total: {0:10.3f}'.format(10.3333)
+print("Jumlah total: %10.3f" % 10.3333)
+print("Jumlah total: {0:10.3f}".format(10.3333))
 ```
 
 ## <a name="variabel"></a>Variabel
@@ -219,7 +221,6 @@ while i <= n:
   i = i+1
 
 print(sum)
-
 ```
 
 ### <a name="for_loop"></a>For Loop
@@ -240,9 +241,9 @@ Fungsi dalam Python didefinisikan menggunakan kata kunci `def`. Setelah `def` ad
 
 ```
 def pemain_bola_terbaik():
-  print "Lionel Messi"
+    print("Lionel Messi")
 
-pemain_bola_terbaik() # => "Lionel Messi"
+pemain_bola_terbaik()  # => "Lionel Messi"
 ```
 
 ## <a name="parameter_fungsi"></a>Parameter Fungsi
@@ -263,6 +264,66 @@ cetak_maksimal(10, 5)
 ```
 
 ## <a name="variabel_lokal"></a>Variabel Lokal
+
+Jika ada variabel yang dideklarasikan didalam fungsi, variabel ini tidak ada kaitannya dengan variabel lain dengan nama yang sama diluar fungsi sehingga hanya bisa berjalan di dalam fungsi tersebut.
+
+```
+x = 50
+
+def fungsi(x):
+  print("x = ", x)
+  x = 2
+  print("merubah lokal variabel x = ", x)
+
+fungsi(100)
+
+print("nilai x masih %s" % x)
+```
+
+## <a name="statemen_global"></a>Statemen Global
+
+Statemen Global digunakan supaya variabel bisa diakses di luar fungsi.
+
+```
+x = 50
+
+
+def fungsi():
+    print("x = ", x)
+
+
+def fungsi2():
+    x = 100  # menulis ke lokal variabel
+    print("x = ", x)
+
+
+def fungsi3():
+    global x
+    x = 100
+    print("x = ", x)
+
+
+fungsi()
+print("nilai x fungsi-1 = ", x, "\n")
+
+fungsi2()
+print("nilai x fungsi-2 = ", x, "\n")
+
+fungsi3()
+print("nilai x fungsi-3 = ", x, "\n")
+```
+
+## <a name="argumen_default"></a>Argumen Default
+
+Untuk beberapa fungsi yang ingin menyediakan paramater opsional dan menggunakan nilai default jika tidak menyediakan argumen saat fungsi dipanggil maka bisa menggunakana `=` pada paramaternya.
+
+```
+def mcd(pesan, jumlah=1):
+    print(pesan, jumlah)
+
+mcd('Ayam Goreng')
+mcd('Ayam Goreng', 3)
+```
 
 # <a name="referensi"></a>Referensi
 
