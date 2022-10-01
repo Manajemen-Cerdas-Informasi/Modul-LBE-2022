@@ -11,6 +11,7 @@
 - [Dasar](#dasar)
   - [Aritmatika](#aritmatika)
   - [Print](#print)
+  - [Input](#input)
   - [Komentar](#komentar)
   - [Konstanta Literal](#konstanta-literal)
   - [String](#string)
@@ -30,6 +31,17 @@
   - [Variabel Lokal](#variabel-lokal)
   - [Statemen Global](#statemen_global)
   - [Argumen Default](#argumen_default)
+- [Struktur Data](#struktur_data)
+  - [List](#list)
+    - [Read List](#read_list)
+    - [Insert List](#insert_list)
+    - [Update List](#update_list)
+    - [Delete List](#delete_list)
+  - [Tuple](#tuple)
+  - [Dictionary](#dictionary)
+    - [read_dictionary](#read_dictionary)
+    - [update_dictionary](#update_dictionary)
+    - [delete_dictionary](#delete_dictionary)
 - [Referensi](#referensi)
 
 </br>
@@ -101,6 +113,14 @@ print("Kata yang akan di print")
 ```
 
 > Catatan : Untuk catatan, sebaiknya mengatur teks editor agar indentasi menggunakan spasi sebanyak 4 buah spasi (tab)
+
+## <a name="input"></a>Input
+
+Untuk melakukan input dalam program python maka menggunakan syntax yaitu
+
+```
+input("Masukkan Inputan:")
+```
 
 ## <a name="komentar"></a>Komentar
 
@@ -323,6 +343,118 @@ def mcd(pesan, jumlah=1):
 
 mcd('Ayam Goreng')
 mcd('Ayam Goreng', 3)
+```
+
+# <a name="struktur_data"></a>Struktur Data
+
+Struktur Data adalah struktur yang dapat menyimpan dan mengorganisasikan kumpulan data
+
+## <a name="list"></a>List
+
+List adalah struktur data yang menyimpan koleksi data terurut yang dapat menyimpan sequence/rangkaian item menggunakan list.
+</br>
+Item dalam list ditutup menggunakan kurung siku `[]` (list literal). Setelah list dibuat kita bisa menambah, mengurangi, dan mencari item pada list sehingga list bersifat `mutable`
+
+### <a name="read_list"></a>Read List
+
+Untuk mengakses nilai list dalam python maka gunakan kurung siku untuk membagi antar index yang tersedia.
+
+```
+list1 = ['Pengabdi Setan', 'Mencuri Raden Saleh', 'KKN Desa Penari']
+list2 = [100, 200, 300], [400, 500, 600], [700, 800, 900]
+
+print("list1[0]: ", list1[0])
+print("list2[2]: ", list2[2])
+```
+
+### <a name="insert_list"></a>Insert List
+
+Untuk memasukkan nilai dari suatu list maka bisa menggunakan fungsi `append()`.
+
+```
+list = ['Pengabdi Setan', 'Mencuri Raden Saleh', 'KKN Desa Penari']
+list.append('Keluarga Cemara')
+
+print(list)
+```
+
+### <a name="update_list"></a>Update List
+
+Untuk memperbarui nilai dari suatu list maka bisa langsung memasukkan nilai menggunakan `=`.
+
+```
+list = ['Pengabdi Setan', 'Mencuri Raden Saleh', 'KKN Desa Penari']
+print("Sebelum Diganti: ", list[2])
+
+list[2] = 'Miracle In Cell No. 7'
+print("Sebelum Diganti: ", list[2])
+```
+
+### <a name="delete_list"></a>Delete List
+
+Untuk mengahapus nilai dari suatu list maka bisa menggunakan fungsi `remove()`.
+
+```
+list = ['Pengabdi Setan', 'Mencuri Raden Saleh',
+        'KKN Desa Penari', 'Miracle In Cell No. 7']
+list.remove('KKN Desa Penari')
+
+print(list)
+```
+
+## <a name="tuple"></a>Tuple
+
+Tuple mirip dengan list namun tuple bersifat immutable (tidak bisa diubah setelah didefinisikan). Item dalam tuple menggunakan diapit dalam tanda `()`.
+
+```
+tup1 = ('Nayeon', 'Jihyo', 'Momo', 'Sana',
+        'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu')
+tup2 = (1, 2, 3, 4, 5, 6, 7)
+
+print("tup1[0]: ", tup1[0])
+print("tup2[1:5]: ", tup2[1:5])
+```
+
+## <a name="dictionary"></a>Dictionary
+
+Dictionary seperti buku alamat, dengan buku alamat kita bisa mencari alamat atau detail kontak hanya menggunakan nama orang yang kita cari. Kita mengasosiasikan `key` (nama) dengan `value` (detail).
+
+### <a name="read_dictionary"></a>Read Dictionary
+
+Untuk mengakses elemen Dictionary, kita dapat menggunakan tanda kurung siku bersama dengan key untuk mendapatkan nilainya.
+
+```
+dict = {'Name': 'Kurnia', 'Age': 20, 'Laboratory': 'IIM'}
+
+print("dict['Name']: ", dict['Name'])
+print("dict['Laboratory']: ", dict['Laboratory'])
+```
+
+### <a name="update_dictionary"></a>Update Dictionary
+
+Untuk memperbarui Dictionary dengan menambahkan entri baru atau pasangan nilai kunci, memodifikasi entri yang ada, atau menghapus entri.
+
+```
+dict = {'Name': 'Kurnia', 'Age': 20, 'Laboratory': 'IIM'}
+dict['Name'] = 'Kurnia Cahya'
+dict['Address'] = 'Surabaya'
+
+print("dict['Name']: ", dict['Name'])
+print("dict['Address']: ", dict['Address'])
+```
+
+### <a name="delete_dictionary"></a>Delete Dictionary
+
+Untuk menghapus Dictionary dapat dilakukan dengan banyak cara disesuaikan dengan bagian apa yang ingin dihapus.
+
+```
+dict = {'Name': 'Kurnia', 'Age': 20, 'Laboratory': 'IIM'}
+
+del dict['Age']  # remove entry with key 'Age'
+print(dict)
+
+dict.clear()  # remove all entries in dict
+print(dict)
 ```
 
 # <a name="referensi"></a>Referensi
