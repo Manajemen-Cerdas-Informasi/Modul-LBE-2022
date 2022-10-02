@@ -142,14 +142,16 @@ DDL digunakan untuk mendefinisikan, mengubah, serta menghapus database dan objek
 
    ```SQL
    ALTER TABLE demo_sql.mahasiswa
-   ADD COLUMN tgl_lahir DATE                                         /* Menambah atribut baru 'tgl_lahir' pada tabel Mahasiswa */
+   ADD COLUMN tgl_lahir DATE                                         
+   /* Menambah atribut baru 'tgl_lahir' pada tabel Mahasiswa */
    ```
 
    <b>DROP COLUMN</b>
 
    ```SQL
    ALTER TABLE demo_sql.mahasiswa
-   DROP COLUMN tgl_lahir                                                  /* Menghapus atribut 'tgl_lahir' pada tabel Mahasiswa */
+   DROP COLUMN tgl_lahir                                                  
+   /* Menghapus atribut 'tgl_lahir' pada tabel Mahasiswa */
    ```
 
    <b>MODIFY COLUMN</b>
@@ -170,7 +172,8 @@ DDL digunakan untuk mendefinisikan, mengubah, serta menghapus database dan objek
 
 4. <b>DROP TABLE</b> untuk menghapus tabel pada database.
    ```SQL
-   DROP TABLE demo_sql.mahasiswa_its                                                     /* Menghapus tabel 'mahasiswa' */
+   DROP TABLE demo_sql.mahasiswa_its                                                     
+   /* Menghapus tabel 'mahasiswa' */
    ```
 
 ## <a name="dml-sql"></a>Data Manipulation Language (DML)
