@@ -1,11 +1,10 @@
-# Modul X LBE MCI 2022: Database & SQL
+# Modul 2 LBE MCI 2022: Database & SQL
 
 - [Database](#database)
   - [Konsep](#konsep-database)
   - [Istilah](#istilah-database)
   - [Key](#key-database)
   - [Database Management System (DBMS)](#dbms-database)
-  - [Relational Database Management System (DBMS)](#rdbms-database)
 - [SQL](#sql)
   - [Tentang](#tentang-sql)
   - [Tipe Data pada SQL](#tipe-data-sql)
@@ -80,19 +79,7 @@
 - Microsoft Access
 - PostgreSQL
 - Microsoft SQL Server
-
-### <a name="rdbms-database"></a>Relational Database Management System (RDBMS)
-
-<b><i>Relational Database Management System</i></b> yang biasa disingkat dengan RDMBS adalah suatu program yang memungkinkan untuk membuat, memperbarui, dan mengelola suatu basis data relasional (<b><i>relational database</i></b>). Umumnya RDMBS ini menggunakan SQL untuk mengakses database.
-
-Basis data relasional sendiri merupakan suatu jenis database ketika data-data umumnya disimpan dalam bentuk yang terstruktur berupa tabel (baris dan kolom) dan setiap tabel/data yang terdapat dalam database memiliki relasi (<i>relational</i>) satu sama lain. Seperti terlihat pada gambar berikut:
-
-<img src="../modul-sql/img/RDBMS.jpg" width="500">
-
-Basis data rasional cukup mudah dikelola. Setiap tabel/data dapat di-<i>update</i> atau dimodifikasi tanpa mengganggu tabel/data yang lain.
-
-- <i>Flexible</i>: jika perlu memperbarui data, hanya perlu melakukannya sekali saja, jadi tidak perlu lagi mengubah banyak <i>file</i> satu per satu.
-- Cukup mudah untuk di-<i>extend</i>. Misalnya saat data sudah semakin banyak, dapat dengan mudah memperbesar kapasitas dari database yang dimiliki.
+- BigQuery
 
 # <a name="sql"></a>2. SQL
 
@@ -155,14 +142,14 @@ DDL digunakan untuk mendefinisikan, mengubah, serta menghapus database dan objek
 
    ```SQL
    ALTER TABLE demo_sql.mahasiswa
-   ADD COLUMN Tgl_lahir DATE                                         /* Menambah atribut baru 'Tanggal_Lahir' pada tabel Mahasiswa */
+   ADD COLUMN tgl_lahir DATE                                         /* Menambah atribut baru 'tgl_lahir' pada tabel Mahasiswa */
    ```
 
    <b>DROP COLUMN</b>
 
    ```SQL
    ALTER TABLE demo_sql.mahasiswa
-   DROP COLUMN Tgl_lahir                                                  /* Menghapus atribut 'Usia' pada tabel Mahasiswa */
+   DROP COLUMN tgl_lahir                                                  /* Menghapus atribut 'tgl_lahir' pada tabel Mahasiswa */
    ```
 
    <b>MODIFY COLUMN</b>
@@ -196,6 +183,13 @@ DML digunakan untuk memanipulasi data yang ada dalam suatu tabel. Berisi berbaga
    INSERT demo_sql.mahasiswa (nrp, nama, usia, semester, ipk)
    VALUES('5025201094', 'Reyner', 20, 5, 3.99),
          ('5025201095', 'Kurnia', 21, 6, 3.80)
+    /* Menambahkan record yang atributnya
+    NRP : 5025201094
+    Nama : Reyner
+    Usia : 20
+    Semester : 5
+    IPK : 3.99
+    ... */
 
    ```
 
