@@ -89,7 +89,7 @@
 
 SQL (<i>Structured Query Language</i>) adalah sebuah bahasa yang digunakan untuk mengakses data dalam basis data relasional. SQL dapat digunakan untuk mendefinisikan struktur data, pengubahan data, memanipulasi/memperoleh data, pengaturan sekuritas, dan lain lain. SQL dilafalkan dengan membaca tiap karakternya **S Q L** (Es Qi El) atau **Siquel**.
 
-## <a name="tipe-data-sql"></a>Tipe Data pada SQL
+## <a name="tipe-data-sql"></a>Tipe Data pada SQL (BigQuery)
 
 Pada SQL terdapat banyak sekali tipe data yang digunakan untuk atribut. Berikut ini adalah beberapa tipe data yang populer digunakan.
 
