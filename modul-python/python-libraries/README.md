@@ -18,6 +18,18 @@
     - [Dtypes](#dtypes)
     - [Info()](#info)
   - [Informasi Statistik](#informasi_statistik)
+  - [Menampilkan Kolom](#menampilkan_kolom)
+  - [Filtering Data](#filtering_data)
+  - [Sort Data](#sort_data)
+  - [Agregasi Data](#agregasi_data)
+- [Numpy](#numpy)
+  - [Array NumPy](#array_numpy)
+    - [Zeros()](#array_zeros)
+    - [Ones()](#array_ones)
+    - [Arange()](#array_arange)
+    - [Linspace()](#array_linspace)
+    - [Longspace()](#array_longspace)
+  - [Multidimensional Array](#multidimensional_array)
 - [Referensi](#referensi)
 
 </br>
@@ -71,6 +83,12 @@ maka akan keluar hasil versi dari pandas tersebut </br>
 ## <a name="membaca_file_csv"></a>Membaca File CSV
 
 Cara membaca isi file dengan format csv menggunakan python yaitu sebagai berikut
+
+```
+df = pd.read_csv(url, index_col=0)
+```
+
+Adapun jika menggunakan dataset yang kita gunakan yaitu sebagai berikut
 
 ```
 url = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Indonesia.csv"
@@ -165,6 +183,133 @@ Informasi statistik untuk setiap kolom seperti nilai minimum, nilai maksimum, st
 df.describe(include='all')
 ```
 
+## <a name="menampilkan_kolom"></a>Menampilkan Kolom
+
+Penggunaan Pandas juga bisa dilakukan untuk menampilkan data berdasarkan nama kolom yg diinginkan.
+
+```
+df[['kolom1', 'kolom2']].head()
+```
+
+## <a name="filtering_data"></a>Filtering Data
+
+Salah satu bagian penting yang digunakan dalam penyiapan data dan analisis data adalah filtering, yaitu pemilihan data dengan kriteria tertentu. Ini juga disebut data subset. Format filtering adalah sebagai berikut
+
+```
+df[(df.key == "value")]
+```
+
+Contoh sesuai dataset, jika kita ingin memfilter data vaksin yang menggunakan bersumber dengan url `https://covid19.who.int/` adalah sebagai berikut
+
+```
+df[(df.source_url == "https://covid19.who.int/")]
+```
+
+## <a name="sort_data"></a>Sort Data
+
+Fungsi `sort_values()` digunakan untuk melakukan pengurutan data berdasarkan dengan kolom yang disebutkan mulai dari nilai terkecil.
+
+```
+df.sort_values('kolom')
+```
+
+Jika ingin mengurutkan data dimulai dari nilai terbesar yaitu dengan mengubah nilai `ascending = FALSE`.
+
+```
+df.sort_values('kolom', ascending = False)
+```
+
+## <a name="agregasi_data"></a>Agregasi Data
+
+Pandas menyediakan fungsi statistik agregasi, seperti count, sum, min, max dan lainnya. Fungsi-fungsi ini dapat diterapkan ke kolom.
+
+```
+df.sum()
+df.min()
+df.max()
+df.mean()
+```
+
+Adapun jika ingin menghitung berdasarkan kolomnya maka bisa dilakukan sebagai berikut
+
+```
+df.kolom.sum()
+```
+
+# <a name="numpy"></a>Numpy
+
+NumPy merupakan salah satu library Python yang banyak digunakan dalam proses analisis data karena fiturnya yang hebat. NumPy hampir menyerupai List pada Python tetapi lebih powerful. Ada beberap kelebihan NumPy dibandingkan List seperti size, performance dan functionally. Struktur data NumPy lebih membutuhkan ukuran yang lebih kecil dibandingkan dengan List tetapi mempunyai performa yang lebih cepat.
+
+Pada terminal, tuliskan command berikut untuk mendowload library NumPy ke komputer kita.
+
+```
+pip install numpy
+```
+
+ntuk menggunakan NumPy maka harus melakukan import dan bisa kita memberikan nama yang lebih pendek agar lebih mudah digunakan contohnya `np` sehingga jika dituliskan dalam program python menjadi
+
+```
+import numpy as np
+```
+
+## <a name="array_numpy"></a>Array NumPy
+
+Kita bisa membuat Array menggunakan NumPy dengan membungkusnya terlebih dahulu di List dan dirubah menjadi numpy array.
+
+```
+np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+```
+
+### <a name="array_zeros"></a>Zeros()
+
+Membuat array dengan nilai 0
+
+```
+np.zeros(n)
+```
+
+### <a name="array_ones"></a>Ones()
+
+Membuat array dengan nilai 1
+
+```
+np.ones(n)
+```
+
+### <a name="array_arange"></a>Arange()
+
+Membuat array dengan nilai dalam range
+
+```
+np.arange(x, y, z)  # x = start, y = end, z = step
+```
+
+### <a name="array_linspace"></a>Linspace()
+
+Membuat array dengan nilai dalam interval
+
+```
+np.linspace(x, y, z) # x = start, y = end, z = number
+```
+
+### <a name="array_longspace"></a>Longspace()
+
+Membuat array dengan nilai log10 dalam interval
+
+```
+np.longspace(x, y, z) # x = start, y = end, z = number
+```
+
+## <a name="multidimensional_array"></a>Multidimensional Array
+
+Fitur menarik dari NumPy adalah mampu membuat multidimensional array dan melakukan manipulasi array dengan mudah dan cepat. Berikut contoh array 2 dimensi yang dibuat dengan NumPy
+
+```
+np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+```
+
 # <a name="referensi"></a>Referensi
 
 - https://hub.idbigdata.com/sigit-prasetyo/panduan-praktis-penggunaan-pandas-bagian-1-39
+- https://hub.idbigdata.com/sigit-prasetyo/panduan-praktis-penggunaan-pandas-bagian-2-40
+- https://ngodingdata.com/tutorial-dasar-numpy-python/
