@@ -159,7 +159,7 @@ DDL digunakan untuk mendefinisikan, mengubah, serta menghapus database dan objek
    ```SQL
    ALTER TABLE demo_sql.mahasiswa
    ALTER COLUMN ipk SET DATA TYPE FLOAT64
-   /* Mengubah tipe data atribut NRP menjadi VARCHAR(14) */
+   /* Mengubah tipe data atribut IPK menjadi FLOAT64 */
    ```
 
 3. <b>RENAME TABLE</b> untuk mengganti nama tabel pada database.
@@ -244,7 +244,8 @@ DML digunakan untuk memanipulasi data yang ada dalam suatu tabel. Berisi berbaga
 5. <b>WHERE</b> untuk filter suatu <i>record</i>.
 
    ```SQL
-   SELECT nama, usia
+   SELECT 
+      nama, usia
    FROM
       `encouraging-key-363809.demo_sql.mahasiswa`
    WHERE
@@ -283,7 +284,7 @@ DML digunakan untuk memanipulasi data yang ada dalam suatu tabel. Berisi berbaga
       `encouraging-key-363809.demo_sql.mahasiswa`
    ORDER BY
       nama DESC;
-   /* Menampilkan data Nama dengan urutan ascending */
+   /* Menampilkan data Nama dengan urutan descending */
    ```
 
 8. <b>MIN</b> dan <b>MAX</b> untuk menampilkan nilai terkecil (minimum) dan nilai terbesar (maksimum).
@@ -327,7 +328,7 @@ DML digunakan untuk memanipulasi data yang ada dalam suatu tabel. Berisi berbaga
       SUM(ukt)
    FROM
       `encouraging-key-363809.demo_sql.mahasiswa`
-   /* Menampilkan jumlah total data dari atribut Harga */
+   /* Menampilkan jumlah total data dari atribut UKT */
    ```
 
 10. <b>GROUP BY</b> untuk mengelompokkan baris yang memiliki nilai yang sama. Biasanya digunakan bersamaan dengan fungsi agregasi.
@@ -365,9 +366,7 @@ SOAL TANTANGAN!
 
 ## <a name="platform-sql"></a>Platform untuk Latihan
 
-1. https://www.w3schools.com/sql/sql_exercises.asp
-2. https://sqlzoo.net/wiki/SQL_Tutorial
-3. https://www.hackerrank.com/domains/sql
+1. https://console.cloud.google.com/bigquery
 
 ## <a name="referensi"></a>Referensi
 
