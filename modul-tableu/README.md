@@ -99,6 +99,8 @@ Tableau adalah sebuah aplikasi yang dirancang untuk melakukan *Business Intelleg
   - Custom
 
     Menu untuk menambahkan custom lines, bands, dan boxplot.
+   
+  Selanjutnya, pada panel sebelah kanan, terdapat *show me* yang berisi berbagai macam bentuk diagram visualisasi yang dapat digunakan
     
   # <a name="tableau-navigation"></a>Tableau Navigation
   Navigasi pada tableau terdapat pada pojok kiri bawah yang meliputi:
