@@ -44,6 +44,14 @@
   - [Stacked Area Plot](#stacked_area)
   - [Multiple Line](#multiple_line)
   - [Multiple Bar](#multiple_bar)
+- [Seaborn](#seaborn)
+  - [Import Seaborn](#import_seaborn)
+  - [Scatter Plot](#seaborn_scatter)
+  - [Bar Plot](#seaborn_bar)
+  - [Line Plot](#seaborn_line)
+  - [Box Plot](#seaborn_box)
+  - [Distribution Plot](#seaborn_dist)
+  - [Heatmap](#seaborn_heatmap)
 - [Referensi](#referensi)
 
 </br>
@@ -121,6 +129,9 @@ Setelah berhasil diload ke dalam Pandas DataFrame, maka kita menggunakan fungsi 
 df
 ```
 
+Hasilnya akan seperti ini </br>
+<img src="https://user-images.githubusercontent.com/70510279/193499215-d999c771-0e8e-4027-be92-7ab598e2dca1.png" alt="Sample Data Pandas" width="1000"/>
+
 ### <a name="head"></a>Head()
 
 Fungsi `head()` pada sample data Pandas digunakan untuk melihat `n-record` baris pertama pada DataFrame.
@@ -128,6 +139,9 @@ Fungsi `head()` pada sample data Pandas digunakan untuk melihat `n-record` baris
 ```
 df.head()
 ```
+
+Hasilnya yaitu </br>
+<img src="https://user-images.githubusercontent.com/70510279/193498137-29896a78-3152-47b0-b6cc-71f8074fda09.png" alt="Head Pandas" width="1000"/>
 
 ### <a name="tail"></a>Tail()
 
@@ -137,6 +151,9 @@ Fungsi `tail()` pada sample data Pandas digunakan untuk melihat `n-record` baris
 df.tail()
 ```
 
+Hasilnya yaitu </br>
+<img src="https://user-images.githubusercontent.com/70510279/193498267-09e81c14-841b-4276-8c2c-3b1d9763e86b.png" alt="Tail Pandas" width="1000"/>
+
 ### <a name="sample"></a>Sample()
 
 Fungsi `sample()` pada sample data Pandas digunakan untuk melihat `n-record` secara acak pada DataFrame.
@@ -144,6 +161,9 @@ Fungsi `sample()` pada sample data Pandas digunakan untuk melihat `n-record` sec
 ```
 df.sample()
 ```
+
+Hasilnya yaitu </br>
+<img src="https://user-images.githubusercontent.com/70510279/193498399-8e913e8c-0441-415c-9005-1254b6c98695.png" alt="Sample Pandas" width="1000">
 
 ## <a name="jumlah_data"></a>Jumlah Data
 
@@ -157,6 +177,9 @@ Untuk memperoleh informasi jumlah records pada setiap kolom maka bisa menggunaka
 df.count()
 ```
 
+Hasilnya yaitu </br>
+<img src="https://user-images.githubusercontent.com/70510279/193498614-ce57a7d9-7a8a-46f5-b323-c2367315086e.png" alt="Count Pandas" width="200"/>
+
 ### <a name="shape_siku"></a>Shape[0]
 
 Cara lain untuk menampilkan jumlah records pada setiap bisa menggunakan `shape[0]`.
@@ -164,6 +187,9 @@ Cara lain untuk menampilkan jumlah records pada setiap bisa menggunakan `shape[0
 ```
 df.shape[0]
 ```
+
+Hasilnya yaitu </br>
+<img src="https://user-images.githubusercontent.com/70510279/193498839-e39d1a32-db7b-4581-9e3e-a260ee2215ea.png" alt="Shape Pandas" width="200"/>
 
 ## <a name="informasi_struktur_data"></a>Informasi Struktur Data
 
@@ -175,6 +201,9 @@ Untuk mengetahui dimensi dari suatu dataframe bisa menggunakan `df.shape`. Hasil
 df.shape
 ```
 
+Hasilnya yaitu </br>
+<img src="https://user-images.githubusercontent.com/70510279/193498976-c77e9369-3c88-49c5-8d28-396da9a83b4b.png" alt="Shape Pandas" width="100"/>
+
 ### <a name="dtypes"></a>Dtypes
 
 Fungsi `df.dtypes` digunakan untuk melihat struktur dari data di setiap kolomnya. Berikut cara penggunaannya
@@ -182,6 +211,9 @@ Fungsi `df.dtypes` digunakan untuk melihat struktur dari data di setiap kolomnya
 ```
 df.dtypes
 ```
+
+Maka akan keluar hasil seperti ini </br>
+<img src="https://user-images.githubusercontent.com/70510279/193499319-995f7475-2b58-4748-8aec-b64c7202b06b.png" alt="Dtypes Pandas" width="300"/>
 
 ### <a name="info"></a>Info()
 
@@ -191,6 +223,9 @@ Untuk mengetahui lebih detail mengenai struktur DataFrame bisa menggunakan `df.i
 df.info()
 ```
 
+hasilnya yaitu </br>
+<img src="https://user-images.githubusercontent.com/70510279/193499832-23de59ef-9ebe-47fa-9d8d-cc08641a9165.png" alt="Info Pandas" width="300"/>
+
 ## <a name="informasi_statistik"></a>Informasi Statistik
 
 Informasi statistik untuk setiap kolom seperti nilai minimum, nilai maksimum, standar deviasi, rata-rata dan sebagainya, dapat ditampilkan dengan mengikuti perintah berikut
@@ -199,6 +234,9 @@ Informasi statistik untuk setiap kolom seperti nilai minimum, nilai maksimum, st
 df.describe(include='all')
 ```
 
+hasilnya yaitu </br>
+<img src="https://user-images.githubusercontent.com/70510279/193499927-9f8f6be6-0490-4f60-81da-bf27f67cff0f.png" alt="Describe Pandas" width="1000"/>
+
 ## <a name="menampilkan_kolom"></a>Menampilkan Kolom
 
 Penggunaan Pandas juga bisa dilakukan untuk menampilkan data berdasarkan nama kolom yg diinginkan.
@@ -206,6 +244,9 @@ Penggunaan Pandas juga bisa dilakukan untuk menampilkan data berdasarkan nama ko
 ```
 df[['kolom1', 'kolom2']].head()
 ```
+
+Jika menggunakan dataset yang sudah di load sebelumnya, maka hasilnya akan seperti ini </br>
+<img src="https://user-images.githubusercontent.com/70510279/193500130-441c9f85-a375-4672-8ded-dc6315399c95.png" alt="Menampilkan Kolom Pandas" width="500"/>
 
 ## <a name="filtering_data"></a>Filtering Data
 
@@ -221,6 +262,8 @@ Contoh sesuai dataset, jika kita ingin memfilter data vaksin yang menggunakan be
 df[(df.source_url == "https://covid19.who.int/")]
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193501786-06306bab-2ef3-4843-96c0-80711b2308db.png" alt="Filtering Data Pandas" width="1000"/>
+
 ## <a name="sort_data"></a>Sort Data
 
 Fungsi `sort_values()` digunakan untuk melakukan pengurutan data berdasarkan dengan kolom yang disebutkan mulai dari nilai terkecil.
@@ -234,6 +277,9 @@ Jika ingin mengurutkan data dimulai dari nilai terbesar yaitu dengan mengubah ni
 ```
 df.sort_values('kolom', ascending = False)
 ```
+
+Jika menggunakan dataset yang sudah di load sebelumnya, maka hasilnya akan seperti ini </br>
+<img src="https://user-images.githubusercontent.com/70510279/193502033-586a4730-41c5-4be2-8c31-d117daf83c06.png" alt="Sort Data Pandas" width="1000"/>
 
 ## <a name="agregasi_data"></a>Agregasi Data
 
@@ -278,6 +324,8 @@ Kita bisa membuat Array menggunakan NumPy dengan membungkusnya terlebih dahulu d
 np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193502179-d8098475-3927-4292-b2ec-e378c7c44453.png" alt="Array NumPy" width="400"/>
+
 ### <a name="array_zeros"></a>Zeros()
 
 Membuat array dengan nilai 0
@@ -285,6 +333,8 @@ Membuat array dengan nilai 0
 ```
 np.zeros(n)
 ```
+
+<img src="https://user-images.githubusercontent.com/70510279/193502238-187e1f35-f925-4036-b570-dd8a77cf0405.png" alt="Array NumPy" width="300"/>
 
 ### <a name="array_ones"></a>Ones()
 
@@ -294,6 +344,8 @@ Membuat array dengan nilai 1
 np.ones(n)
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193502548-1a3b94e0-562f-494e-b1f4-4b1404e0382f.png" alt="Array NumPy" width="300"/>
+
 ### <a name="array_arange"></a>Arange()
 
 Membuat array dengan nilai dalam range
@@ -302,6 +354,8 @@ Membuat array dengan nilai dalam range
 np.arange(x, y, z)  # x = start, y = end, z = step
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193502725-5a86d61b-8b66-42a1-a3d6-f93ed1513f4a.png" alt="Array NumPy" width="500"/>
+
 ### <a name="array_linspace"></a>Linspace()
 
 Membuat array dengan nilai dalam interval
@@ -309,6 +363,8 @@ Membuat array dengan nilai dalam interval
 ```
 np.linspace(x, y, z) # x = start, y = end, z = number
 ```
+
+<img src="https://user-images.githubusercontent.com/70510279/193502832-af454977-0aa6-4fa0-944d-8a314cd3f93d.png" alt="Array NumPy" width="500"/>
 
 ### <a name="array_longspace"></a>Longspace()
 
@@ -325,6 +381,8 @@ Fitur menarik dari NumPy adalah mampu membuat multidimensional array dan melakuk
 ```
 np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 ```
+
+<img src="https://user-images.githubusercontent.com/70510279/193502948-5382374b-bd9d-4439-b339-e0e11aad2fe2.png" alt="Multidimensional Array" width="200"/>
 
 ## <a name="indexing"></a>Indexing
 
@@ -352,6 +410,8 @@ print("Pembagian = ", arr_A / arr_B)
 print("Perpangkatan = ", arr_A ** arr_B)
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193508484-739c2753-9e67-472f-b9ec-5b59fd24645d.png" alt="Aritmetika" width="300"/>
+
 ## <a name="fungsi_statistik"></a>Fungsi Statistik
 
 NumPy bisa melakukan fungsi statistik seperti menghitung nilai minimal, maksimal, rata-rata, penjumlahan, dan lainnya. Berikut contoh penggunaan fungsi statistik pada array.
@@ -365,6 +425,8 @@ print("Nilai rata-rata = ", arrku.mean())
 print("Total nilai = ", arrku.sum())
 print("Standar Deviasi = ", arrku.std())
 ```
+
+<img src="https://user-images.githubusercontent.com/70510279/193508827-9e95508e-ddfa-48e3-a2de-d5e4aa15b7a9.png" alt="Fungsi Statistik" width="300"/>
 
 # <a name="matplotlib"></a>Matplotlib
 
@@ -404,6 +466,8 @@ plt.xlabel('label X')
 plt.show()
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193509366-0d4f4323-e808-4c4a-87d8-295734c063a6.png" alt="Grafik Sederhana" width="300"/>
+
 ## <a name="histogram"></a>Histogram
 
 Histogram adalah bentuk grafik yang menyatakan tabulasi frekuensi dalam bentuk batang. Histogram memudahkan kita untuk memahami ringkasan persebaran data. Berikut contoh membuat histogram dengan Matplotlib yaitu dengan fungsi `hist()`.
@@ -413,6 +477,8 @@ x = np.random.normal(170, 10, 250) # np adalah Library NumPy
 plt.hist(x)
 plt.show()
 ```
+
+<img src="https://user-images.githubusercontent.com/70510279/193509563-31ba62a8-3d7f-4ff7-aba3-127d733bb269.png" alt="Histogram" width="300"/>
 
 ## <a name="scatter_plot"></a>Scatter Plot
 
@@ -425,6 +491,8 @@ arr_B = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 plt.scatter(arr_A, arr_B)
 plt.show()
 ```
+
+<img src="https://user-images.githubusercontent.com/70510279/193510712-5670f2ad-2179-4059-801f-a564348c5834.png" alt="Scatter Plot" width="300"/>
 
 Kita juga bisa membandingkan dua buah scatter plot contohnya adalah sebagai berikut
 
@@ -439,6 +507,8 @@ plt.scatter(arr_C, arr_D, color='b')
 plt.show()
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193510811-971a4a44-1d87-4d0f-93ce-4c580d4af9a3.png" alt="Scatter Plot" width="300"/>
+
 ## <a name="bar_plot"></a>Bar Plot
 
 Bar plot atau bar chart adalah jenis plot yang direpresentasikan dengan bar atau batang, dimana panjang bar adalah representasi dari ukuran sebuah fitur atau variabel. Berikut contoh membuat bar plot dengan Matplotlib.
@@ -451,6 +521,8 @@ plt.bar(matkul, jumlah_mahasiswa)
 plt.show()
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193510890-92d62162-7665-4c80-8a6a-95f1a94139fe.png" alt="Bar Plot" width="300"/>
+
 ## <a name="pie_chart"></a>Pie Chart
 
 Pie chart adalah grafik yang menampilkan data dalam bentuk lingkaran. Berikut contoh membuat pie chart dengan Matplotlib.
@@ -462,6 +534,8 @@ jumlah_mahasiswa = [40, 30, 35, 40, 25, 30, 35]
 plt.pie(jumlah_mahasiswa, labels=matkul)
 plt.show()
 ```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511010-372ce310-40d1-4c77-8be8-b0bef2f0c6b7.png" alt="Pie Chart" width="300"/>
 
 ## <a name="stacked_bar"></a>Stacked Bar
 
@@ -477,6 +551,8 @@ plt.bar(kota, jumlah_wanita, bottom=jumlah_pria, color='b')
 plt.show()
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193511078-ca908b0a-8e49-4dc9-942a-ae2343f57df4.png" alt="Stacked Bar" width="300"/>
+
 ## <a name="stacked_area"></a>Stacked Area
 
 Stacked area adalah grafik yang menampilkan data dalam bentuk area yang saling menumpuk. Berikut contoh membuat stacked area dengan Matplotlib.
@@ -490,6 +566,8 @@ plt.stackplot(kota, jumlah_pria, jumlah_wanita, colors=['r', 'b'])
 plt.show()
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193511192-430d9d85-e373-4ce0-9a4a-e1ad72910eca.png" alt="Stacked Area" width="300"/>
+
 ## <a name="multiple_line"></a>Multiple Line
 
 Multiple line adalah grafik yang menampilkan data dalam bentuk garis yang saling berhubungan. Berikut contoh membuat multiple line dengan Matplotlib.
@@ -502,6 +580,8 @@ plt.plot(negara, jumlah_penduduk, color='r')
 plt.plot(negara, jumlah_penduduk, 'ro')
 plt.show()
 ```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511264-ee3a9af2-433f-4775-9dc5-7200c4e1316c.png" alt="Multiple Line" width="300"/>
 
 ## <a name="multiple_bar"></a>Multiple Bar
 
@@ -524,6 +604,168 @@ plt.legend()
 plt.show()
 ```
 
+<img src="https://user-images.githubusercontent.com/70510279/193511323-e33d48a4-484f-466e-afcf-71c2587d4d0f.png" alt="Multiple Bar" width="300"/>
+
+# <a name="seaborn"></a>Seaborn
+
+Seaborn adalah library Python yang berfungsi untuk membuat visualisasi data yang lebih menarik. Seaborn memiliki fungsi yang lebih lengkap dibandingkan dengan Matplotlib. Seaborn juga memiliki fungsi untuk membuat statistik deskriptif.
+
+## <a name="import_seaborn"></a>Import Seaborn
+
+Sebelum menggunakan Seaborn, kita harus mengimport library Seaborn terlebih dahulu. Berikut contoh import Seaborn.
+
+```
+import seaborn as sns
+```
+
+Install Seaborn dengan pip
+
+```
+pip install seaborn
+```
+
+Lalu kita menggunakan dataset yang sudah disediakan yaitu
+
+> <a href="https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Indonesia.csv">Data Vaksinasi Indonesia</a>
+
+## <a name="seaborn_scatter"></a>Scatter Plot
+
+Scatter plot adalah grafik yang menampilkan data dalam bentuk titik. Berikut contoh membuat scatter plot dengan Seaborn.
+
+```
+arr_A = np.array([1, 2, 3, 4, 5])
+arr_B = np.array([6, 7, 8, 9, 10])
+
+sns.scatterplot(x=arr_A, y=arr_B)
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511441-e154a09e-7db8-4874-a035-9f2758cdf77a.png" alt="Scatter Plot" width="300"/>
+
+Jika menggunakan dataset yang sudah disediakan, maka kita bisa menggunakan fungsi `sns.scatterplot()` dengan parameter `x` dan `y` yang diisi dengan nama kolom yang akan ditampilkan.
+
+```
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+url = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Indonesia.csv"
+df = pd.read_csv(url, index_col=0)
+
+sns.scatterplot(x=df['total_vaccinations'], y=df['people_vaccinated'])
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511522-660114de-df71-49c6-973c-459630e63d28.png" alt="Scatter Plot" width="300"/>
+
+## <a name="seaborn_bar"></a>Bar Plot
+
+Seaborn juga memiliki fungsi untuk membuat bar plot. Berikut contoh membuat bar plot dengan Seaborn.
+
+```
+arr_A = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+sns.barplot(arr_A)
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511578-c34bfe88-e961-452d-9814-225ec440a4ee.png" alt="Bar Plot" width="300"/>
+
+Menggunakan dataset yang sudah disediakan, kita bisa menggunakan fungsi `sns.barplot()` dengan parameter `x` dan `y` yang diisi dengan nama kolom yang akan ditampilkan.
+
+```
+sns.barplot(x=df['date'], y=df['total_vaccinations'])
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511643-3234c9dd-9d63-4ae3-af3b-443c4eae9055.png" alt="Bar Plot" width="300"/>
+
+## <a name="seaborn_line"></a>Line Plot
+
+Seaborn juga memiliki fungsi untuk membuat line plot. Berikut contoh membuat line plot dengan Seaborn.
+
+```
+arr_A = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+sns.lineplot(arr_A)
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511695-774d237e-63b9-44cb-8ce9-39a5ad4f8e7c.png" alt="Line Plot" width="300"/>
+
+Menggunakan dataset yang sudah disediakan, kita bisa menggunakan fungsi `sns.lineplot()` dengan parameter `x` dan `y` yang diisi dengan nama kolom yang akan ditampilkan.
+
+```
+sns.lineplot(x=df['date'], y=df['total_vaccinations'])
+plt.show()
+```
+
+## <a name="seaborn_box"></a>Box Plot
+
+Box plot adalah grafik yang menampilkan data dalam bentuk kotak. Berikut contoh membuat box plot dengan Seaborn.
+
+```
+arr_A = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+sns.boxplot(arr_A)
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511809-b6d48bb4-723d-44c1-8352-32207439b5a1.png" alt="Box Plot" width="300"/>
+
+Menampilkan box plot dengan menggunakan dataset yang sudah disediakan.
+
+```
+sns.boxplot(x=df['date'], y=df['total_vaccinations'])
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193511872-0d6655ff-eb21-4228-bd68-baec12548761.png" alt="Box Plot" width="300"/>
+
+## <a name="seaborn_dist"></a>Distribution Plot
+
+Distribution plot adalah grafik yang menampilkan data dalam bentuk distribusi. Berikut contoh membuat distribution plot dengan Seaborn.
+
+```
+arr_A = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+sns.distplot(arr_A)
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193515622-354b6f59-475b-47d5-8979-9e832d3ce0db.png" alt="Distributin Plot" width="300">
+
+Menggunakan dataset yang sudah disediakan, kita bisa menggunakan fungsi `sns.distplot()` dengan parameter `x` dan `y` yang diisi dengan nama kolom yang akan ditampilkan.
+
+```
+sns.distplot(df['total_vaccinations'])
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193515801-b10bda0c-52f6-4348-aecb-30cdcd2648aa.png" alt="Distributin Plot" width="300">
+
+## <a name="seaborn_heatmap"></a>Heatmap
+
+Heatmap adalah grafik yang menampilkan data dalam bentuk warna. Berikut contoh membuat heatmap dengan Seaborn.
+
+```
+arr_A = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+sns.heatmap(arr_A)
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193515873-916af2f7-0374-4f4e-9c80-bd2f54d05456.png" alt="Heatmap" width="300">
+
+Menampilkan heatmap dengan menggunakan dataset yang sudah disediakan.
+
+```
+sns.heatmap(df.corr(), annot=True)
+plt.show()
+```
+
+<img src="https://user-images.githubusercontent.com/70510279/193515957-d123eda5-331b-4c65-a617-19e9cdd6b042.png" alt="Heatmap" width="300">
+
 # <a name="referensi"></a>Referensi
 
 - https://hub.idbigdata.com/sigit-prasetyo/panduan-praktis-penggunaan-pandas-bagian-1-39
@@ -533,19 +775,5 @@ plt.show()
 - https://www.geeksforgeeks.org/how-to-plot-a-pandas-dataframe-with-matplotlib/
 - https://matplotlib.org/stable/index.html
 - https://www.w3schools.com/python/matplotlib_intro.asp
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
+- https://www.geeksforgeeks.org/seaborn-in-python/
+- https://seaborn.pydata.org/
