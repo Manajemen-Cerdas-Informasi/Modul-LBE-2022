@@ -8,6 +8,7 @@ Daftar materi:
    - Python Basics : [Python Basics](https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/tree/main/modul-python/python-basics)
 2. Modul 2:
    - Python Libraries : [Python Libraries](https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/tree/main/modul-python/python-libraries)
+   - SQL Basics :
 3. Modul 3: ...
 
 ---
