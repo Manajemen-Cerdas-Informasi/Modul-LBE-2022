@@ -106,17 +106,17 @@ Berikut beberapa fungsi aritmatika yang bisa digunakan dalam Python yaitu:
 
 ## <a name="print"></a>Print
 
-Untuk melakukan *print* dalam program Python maka menggunakan sintaks yaitu
+Untuk melakukan *print* dalam program Python maka menggunakan sintaks yaitu:
 
 ```python
 print("Kata yang akan di print")
 ```
 
-> Catatan : Untuk catatan, sebaiknya mengatur teks editor agar indentasi menggunakan spasi sebanyak 4 buah spasi (*tab*)
+> Catatan : Untuk catatan, sebaiknya mengatur teks editor agar indentasi menggunakan spasi sebanyak 4 buah spasi (*tab*).
 
 ## <a name="input"></a>Input
 
-Untuk melakukan input dalam program Python maka menggunakan sintaks yaitu
+Untuk melakukan input dalam program Python maka menggunakan sintaks yaitu:
 
 ```python
 input("Masukkan Inputan:")
