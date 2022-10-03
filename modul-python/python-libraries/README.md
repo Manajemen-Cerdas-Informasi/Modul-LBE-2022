@@ -58,11 +58,11 @@
 
 # <a name="pendahuluan"></a>Pendahuluan
 
-Library python adalah kumpulan modul terkait berisi kumpulan kode yang dapat digunakan berulang kali dalam program yang berbeda. Library juga berguna untuk mengolah dataset agar data bisa menjadi informasi yang berguna dan bisa digunakan.
+*Library* Python adalah kumpulan modul terkait berisi kumpulan kode yang dapat digunakan berulang kali dalam program yang berbeda. *Library* juga berguna untuk mengolah dataset agar data bisa menjadi informasi yang berguna dan bisa digunakan.
 
 ## <a name="dataset"></a>Dataset
 
-Pada kali ini, kita akan menggunakan dataset yang mudah dan tidak mengandung data yang terlalu banyak supaya lebih fokus kepada penggunaan library python itu sendiri. Adapun dataset yang dipakai yaitu Vaksinasi Negara Republik Indonesia yang bisa kalian akses pada link berikut
+Pada kali ini, kita akan menggunakan dataset yang mudah dan tidak mengandung data yang terlalu banyak supaya lebih fokus kepada penggunaan *library* Python itu sendiri. Adapun dataset yang dipakai yaitu Vaksinasi Negara Republik Indonesia yang bisa kalian akses pada *link* berikut:
 
 > <a href="https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Indonesia.csv">Data Vaksinasi Indonesia</a>
 
@@ -70,84 +70,84 @@ Dataset yang digunakan berisikan kolom _locations_, _date_, _vaccine_, dan _sour
 
 ## <a name="text_editor"></a>Text Editor
 
-Selanjutnya kita bisa mengunakan text editor apa aja yang ingin digunakan misalnya Google Collaboratory, Jupyter Notebook, Anaconda, Visual Studio Code, Terminal Python, dan lain-lain. Pada kali ini, kita akan mencobanya di `Visual Studio Code`. Langkah pertama, ketikkan command berikut untuk memperbarui versi python pada terminal komputer.
+Selanjutnya kita bisa mengunakan *text editor* apa saja yang ingin digunakan misalnya Google Colaboratory, Jupyter Notebook, Anaconda, Visual Studio Code, Terminal Python, dan lain-lain. Pada kali ini, kita akan mencobanya di `Visual Studio Code`. Langkah pertama, ketikkan *command* berikut untuk memperbarui versi Python pada terminal komputer.
 
 ```
 pip3 install --upgrade pip
 ```
 
-Setelah itu, bisa dilanjutkan dengan menginstall extension `Jupyter` pada Visual Studio Code. Setelah itu, buatlah file baru dengan ekstensi `.ipynb` dan bisa langsung kita mulai.
+Setelah itu, bisa dilanjutkan dengan meng-*install* *extension* `Jupyter` pada Visual Studio Code. Setelah itu, buatlah *file* baru dengan ekstensi `.ipynb` dan bisa langsung kita mulai.
 
 # <a name="pandas"></a>Pandas
 
-Pandas adalah sebuah paket library pada python yang digunakan untuk mempermudah dalam mengolah dan menganalisa data-data terstruktur. Pandas merupakan paket penting yang wajib diketahui untuk seorang data engineer, data analyst dan data scientist jika ingin mengolah dan menganalisa data menggunakan python.
+Pandas adalah sebuah paket *library* pada Python yang digunakan untuk mempermudah dalam mengolah dan menganalisa data-data terstruktur. Pandas merupakan paket penting yang wajib diketahui untuk seorang *data engineer*, *data analyst*, dan *data scientist* jika ingin mengolah dan menganalisa data menggunakan Python.
 
 </br>
 
-Pandas memiliki format data yang sering digunakan yang disebut `DataFrame`. `Pandas DataFrame` adalah struktur data 2 Dimensi. Data distrukturisasi seperti tabel yang berisi baris dan kolom, sehingga mudah untuk melakukan queri atau mengakses data tersebut. Baris merepresentasikan **record** dan kolom merepresentasikan **field**.
+Pandas memiliki format data yang sering digunakan yang disebut `DataFrame`. `Pandas DataFrame` adalah struktur data 2 dimensi. Data distrukturisasi seperti tabel yang berisi baris dan kolom, sehingga mudah untuk melakukan *query* atau mengakses data tersebut. Baris merepresentasikan **record** dan kolom merepresentasikan **field**.
 
 ## <a name="import_pandas"></a>Import Pandas
 
-Pada terminal, tuliskan command berikut untuk mendowload library pandas ke komputer kita.
+Pada terminal, tuliskan *command* berikut untuk men-*download* *library* Pandas ke komputer kita.
 
 ```
 pip3 install pandas
 ```
 
-Untuk menggunakan Pandas maka harus melakukan import dan bisa kita memberikan nama yang lebih pendek agar lebih mudah digunakan contohnya `pd` sehingga jika dituliskan dalam program python menjadi
+Untuk menggunakan Pandas, maka harus melakukan *import* dan bisa kita memberikan nama yang lebih pendek agar lebih mudah digunakan contohnya `pd` sehingga jika dituliskan dalam program Python menjadi:
 
-```
+```python
 import pandas as pd
 print('Pandas version: {}'.format(pd.__version__))
 ```
 
-maka akan keluar hasil versi dari pandas tersebut </br>
+Maka akan keluar hasil versi dari pandas tersebut </br>
 <img src="https://user-images.githubusercontent.com/70510279/193408374-a129cc68-8650-4df5-bb3c-2c4dc38ec05b.png" alt="Import Pandas" width="1000"/>
 
 ## <a name="membaca_file_csv"></a>Membaca File CSV
 
-Cara membaca isi file dengan format csv menggunakan python yaitu sebagai berikut
+Cara membaca isi *file* dengan format CSV menggunakan Python yaitu sebagai berikut:
 
-```
+```python
 df = pd.read_csv(url, index_col=0)
 ```
 
-Adapun jika menggunakan dataset yang kita gunakan yaitu sebagai berikut
+Adapun jika menggunakan dataset yang kita gunakan yaitu sebagai berikut:
 
-```
+```python
 url = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Indonesia.csv"
 df = pd.read_csv(url, index_col=0)
 ```
 
-> Catatan: URL yang digunakan yaitu URL dari file CSV yang ingin kita akses
+> Catatan: URL yang digunakan yaitu URL dari file CSV yang ingin kita akses.
 
 ## <a name="sample_data_pandas"></a>Sample Data Pandas
 
-Setelah berhasil diload ke dalam Pandas DataFrame, maka kita menggunakan fungsi supaya bisa melihat data sampel di dataset.
+Setelah berhasil di-*load* ke dalam Pandas DataFrame, maka kita menggunakan fungsi supaya bisa melihat data sampel di dataset.
 
-```
+```python
 df
 ```
 
-Hasilnya akan seperti ini </br>
+Hasilnya akan seperti ini: </br>
 <img src="https://user-images.githubusercontent.com/70510279/193499215-d999c771-0e8e-4027-be92-7ab598e2dca1.png" alt="Sample Data Pandas" width="1000"/>
 
 ### <a name="head"></a>Head()
 
-Fungsi `head()` pada sample data Pandas digunakan untuk melihat `n-record` baris pertama pada DataFrame.
+Fungsi `head()` pada sampel data Pandas digunakan untuk melihat `n-record` baris pertama pada DataFrame.
 
-```
+```python
 df.head()
 ```
 
-Hasilnya yaitu </br>
+Hasilnya yaitu: </br>
 <img src="https://user-images.githubusercontent.com/70510279/193498137-29896a78-3152-47b0-b6cc-71f8074fda09.png" alt="Head Pandas" width="1000"/>
 
 ### <a name="tail"></a>Tail()
 
-Fungsi `tail()` pada sample data Pandas digunakan untuk melihat `n-record` baris terakhir pada DataFrame.
+Fungsi `tail()` pada sampel data Pandas digunakan untuk melihat `n-record` baris terakhir pada DataFrame.
 
-```
+```python
 df.tail()
 ```
 
@@ -156,48 +156,48 @@ Hasilnya yaitu </br>
 
 ### <a name="sample"></a>Sample()
 
-Fungsi `sample()` pada sample data Pandas digunakan untuk melihat `n-record` secara acak pada DataFrame.
+Fungsi `sample()` pada sampel data Pandas digunakan untuk melihat `n-record` secara acak pada DataFrame.
 
-```
+```python
 df.sample()
 ```
 
-Hasilnya yaitu </br>
+Hasilnya yaitu: </br>
 <img src="https://user-images.githubusercontent.com/70510279/193498399-8e913e8c-0441-415c-9005-1254b6c98695.png" alt="Sample Pandas" width="1000">
 
 ## <a name="jumlah_data"></a>Jumlah Data
 
-Menggunakan library Pandas, kita juga bisa melihat jumlah data yang ada pada dataset yang kita gunakan. Berikut cara memperoleh jumlah data menggunakan Pandas:
+Menggunakan *library* Pandas, kita juga bisa melihat jumlah data yang ada pada dataset yang kita gunakan. Berikut cara memperoleh jumlah data menggunakan Pandas:
 
 ### <a name="count"></a>Count()
 
-Untuk memperoleh informasi jumlah records pada setiap kolom maka bisa menggunakan `count()`.
+Untuk memperoleh informasi jumlah *record* pada setiap kolom, maka bisa menggunakan `count()`.
 
-```
+```python
 df.count()
 ```
 
-Hasilnya yaitu </br>
+Hasilnya yaitu: </br>
 <img src="https://user-images.githubusercontent.com/70510279/193498614-ce57a7d9-7a8a-46f5-b323-c2367315086e.png" alt="Count Pandas" width="200"/>
 
 ### <a name="shape_siku"></a>Shape[0]
 
-Cara lain untuk menampilkan jumlah records pada setiap bisa menggunakan `shape[0]`.
+Cara lain untuk menampilkan jumlah *record* pada setiap bisa menggunakan `shape[0]`.
 
-```
+```python
 df.shape[0]
 ```
 
-Hasilnya yaitu </br>
+Hasilnya yaitu: </br>
 <img src="https://user-images.githubusercontent.com/70510279/193498839-e39d1a32-db7b-4581-9e3e-a260ee2215ea.png" alt="Shape Pandas" width="200"/>
 
 ## <a name="informasi_struktur_data"></a>Informasi Struktur Data
 
 ### <a name="shape"></a>Shape
 
-Untuk mengetahui dimensi dari suatu dataframe bisa menggunakan `df.shape`. Hasilnya yaitu `(p1, p2)`, pada property pertama akan bernilai jumlah baris/record dalam dataframe dan pada property kedua akan bernilai jumlah kolom dalam dataframe.
+Untuk mengetahui dimensi dari suatu DataFrame bisa menggunakan `df.shape`. Hasilnya yaitu `(p1, p2)`, pada *property* pertama akan bernilai jumlah baris/*record* dalam DataFrame dan pada *property* kedua akan bernilai jumlah kolom dalam DataFrame.
 
-```
+```python
 df.shape
 ```
 
@@ -206,9 +206,9 @@ Hasilnya yaitu </br>
 
 ### <a name="dtypes"></a>Dtypes
 
-Fungsi `df.dtypes` digunakan untuk melihat struktur dari data di setiap kolomnya. Berikut cara penggunaannya
+Fungsi `df.dtypes` digunakan untuk melihat struktur dari data di setiap kolomnya. Berikut cara penggunaannya:
 
-```
+```python
 df.dtypes
 ```
 
@@ -217,48 +217,48 @@ Maka akan keluar hasil seperti ini </br>
 
 ### <a name="info"></a>Info()
 
-Untuk mengetahui lebih detail mengenai struktur DataFrame bisa menggunakan `df.info`
+Untuk mengetahui lebih detail mengenai struktur DataFrame bisa menggunakan `df.info`.
 
-```
+```python
 df.info()
 ```
 
-hasilnya yaitu </br>
+Hasilnya yaitu: </br>
 <img src="https://user-images.githubusercontent.com/70510279/193499832-23de59ef-9ebe-47fa-9d8d-cc08641a9165.png" alt="Info Pandas" width="300"/>
 
 ## <a name="informasi_statistik"></a>Informasi Statistik
 
-Informasi statistik untuk setiap kolom seperti nilai minimum, nilai maksimum, standar deviasi, rata-rata dan sebagainya, dapat ditampilkan dengan mengikuti perintah berikut
+Informasi statistik untuk setiap kolom seperti nilai minimum, nilai maksimum, standar deviasi, rata-rata dan sebagainya, dapat ditampilkan dengan mengikuti perintah berikut:
 
-```
+```python
 df.describe(include='all')
 ```
 
-hasilnya yaitu </br>
+Hasilnya yaitu: </br>
 <img src="https://user-images.githubusercontent.com/70510279/193499927-9f8f6be6-0490-4f60-81da-bf27f67cff0f.png" alt="Describe Pandas" width="1000"/>
 
 ## <a name="menampilkan_kolom"></a>Menampilkan Kolom
 
 Penggunaan Pandas juga bisa dilakukan untuk menampilkan data berdasarkan nama kolom yg diinginkan.
 
-```
+```python
 df[['kolom1', 'kolom2']].head()
 ```
 
-Jika menggunakan dataset yang sudah di load sebelumnya, maka hasilnya akan seperti ini </br>
+Jika menggunakan dataset yang sudah di-*load* sebelumnya, maka hasilnya akan seperti ini </br>
 <img src="https://user-images.githubusercontent.com/70510279/193500130-441c9f85-a375-4672-8ded-dc6315399c95.png" alt="Menampilkan Kolom Pandas" width="500"/>
 
 ## <a name="filtering_data"></a>Filtering Data
 
-Salah satu bagian penting yang digunakan dalam penyiapan data dan analisis data adalah filtering, yaitu pemilihan data dengan kriteria tertentu. Ini juga disebut data subset. Format filtering adalah sebagai berikut
+Salah satu bagian penting yang digunakan dalam penyiapan data dan analisis data adalah *filtering*, yaitu pemilihan data dengan kriteria tertentu. Ini juga disebut data subset. Format *filtering* adalah sebagai berikut:
 
-```
+```python
 df[(df.key == "value")]
 ```
 
-Contoh sesuai dataset, jika kita ingin memfilter data vaksin yang menggunakan bersumber dengan url `https://covid19.who.int/` adalah sebagai berikut
+Contoh sesuai dataset, jika kita ingin mem-*filter* data vaksin yang menggunakan sumber `https://covid19.who.int/` adalah sebagai berikut:
 
-```
+```python
 df[(df.source_url == "https://covid19.who.int/")]
 ```
 
@@ -268,13 +268,13 @@ df[(df.source_url == "https://covid19.who.int/")]
 
 Fungsi `sort_values()` digunakan untuk melakukan pengurutan data berdasarkan dengan kolom yang disebutkan mulai dari nilai terkecil.
 
-```
+```python
 df.sort_values('kolom')
 ```
 
 Jika ingin mengurutkan data dimulai dari nilai terbesar yaitu dengan mengubah nilai `ascending = FALSE`.
 
-```
+```python
 df.sort_values('kolom', ascending = False)
 ```
 
@@ -283,9 +283,9 @@ Jika menggunakan dataset yang sudah di load sebelumnya, maka hasilnya akan seper
 
 ## <a name="agregasi_data"></a>Agregasi Data
 
-Pandas menyediakan fungsi statistik agregasi, seperti count, sum, min, max dan lainnya. Fungsi-fungsi ini dapat diterapkan ke kolom.
+Pandas menyediakan fungsi statistik agregasi, seperti `count`, `sum`, `min`, `max` dan lainnya. Fungsi-fungsi ini dapat diterapkan ke kolom.
 
-```
+```python
 df.sum()
 df.min()
 df.max()
@@ -294,33 +294,33 @@ df.mean()
 
 Adapun jika ingin menghitung berdasarkan kolomnya maka bisa dilakukan sebagai berikut
 
-```
+```python
 df.kolom.sum()
 ```
 
 # <a name="numpy"></a>NumPy
 
-NumPy merupakan salah satu library Python yang banyak digunakan dalam proses analisis data karena fiturnya yang hebat. NumPy hampir menyerupai List pada Python tetapi lebih powerful. Ada beberap kelebihan NumPy dibandingkan List seperti size, performance dan functionally. Struktur data NumPy lebih membutuhkan ukuran yang lebih kecil dibandingkan dengan List tetapi mempunyai performa yang lebih cepat.
+NumPy merupakan salah satu *library* Python yang banyak digunakan dalam proses analisis data karena fiturnya yang hebat. NumPy hampir menyerupai *list* pada Python tetapi lebih *powerful*. Ada beberapa kelebihan NumPy dibandingkan *list* seperti *size*, *performance* dan *functionally*. Struktur data NumPy lebih membutuhkan ukuran yang lebih kecil dibandingkan dengan *list* tetapi mempunyai performa yang lebih cepat.
 
 ## <a name="import_numpy"></a>Import NumPy
 
-Pada terminal, tuliskan command berikut untuk mendowload library NumPy ke komputer kita.
+Pada terminal, tuliskan *command* berikut untuk men-*download* *library* NumPy ke komputer kita.
 
 ```
 pip install numpy
 ```
 
-ntuk menggunakan NumPy maka harus melakukan import dan bisa kita memberikan nama yang lebih pendek agar lebih mudah digunakan contohnya `np` sehingga jika dituliskan dalam program python menjadi
+Untuk menggunakan NumPy, maka harus melakukan *import* dan bisa kita memberikan nama yang lebih pendek agar lebih mudah digunakan contohnya `np` sehingga jika dituliskan dalam program Python menjadi:
 
-```
+```python
 import numpy as np
 ```
 
 ## <a name="array_numpy"></a>Array NumPy
 
-Kita bisa membuat Array menggunakan NumPy dengan membungkusnya terlebih dahulu di List dan dirubah menjadi numpy array.
+Kita bisa membuat *array* menggunakan NumPy dengan membungkusnya terlebih dahulu di *list* dan dirubah menjadi *array* NumPy.
 
-```
+```python
 np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 ```
 
@@ -328,9 +328,9 @@ np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 ### <a name="array_zeros"></a>Zeros()
 
-Membuat array dengan nilai 0
+Membuat *array* dengan nilai 0.
 
-```
+```python
 np.zeros(n)
 ```
 
@@ -338,9 +338,9 @@ np.zeros(n)
 
 ### <a name="array_ones"></a>Ones()
 
-Membuat array dengan nilai 1
+Membuat *array* dengan nilai 1.
 
-```
+```python
 np.ones(n)
 ```
 
@@ -348,9 +348,9 @@ np.ones(n)
 
 ### <a name="array_arange"></a>Arange()
 
-Membuat array dengan nilai dalam range
+Membuat *array* dengan nilai dalam *range*.
 
-```
+```python
 np.arange(x, y, z)  # x = start, y = end, z = step
 ```
 
@@ -358,9 +358,9 @@ np.arange(x, y, z)  # x = start, y = end, z = step
 
 ### <a name="array_linspace"></a>Linspace()
 
-Membuat array dengan nilai dalam interval
+Membuat *array* dengan nilai dalam interval.
 
-```
+```python
 np.linspace(x, y, z) # x = start, y = end, z = number
 ```
 
@@ -368,17 +368,17 @@ np.linspace(x, y, z) # x = start, y = end, z = number
 
 ### <a name="array_longspace"></a>Longspace()
 
-Membuat array dengan nilai log10 dalam interval
+Membuat *array* dengan nilai log10 dalam interval.
 
-```
+```python
 np.longspace(x, y, z) # x = start, y = end, z = number
 ```
 
 ## <a name="multidimensional_array"></a>Multidimensional Array
 
-Fitur menarik dari NumPy adalah mampu membuat multidimensional array dan melakukan manipulasi array dengan mudah dan cepat. Berikut contoh array 2 dimensi yang dibuat dengan NumPy
+Fitur menarik dari NumPy adalah mampu membuat *array* multidimensional dan melakukan manipulasi *array* dengan mudah dan cepat. Berikut contoh *array* 2 dimensi yang dibuat dengan NumPy:
 
-```
+```python
 np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 ```
 
@@ -386,20 +386,20 @@ np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 
 ## <a name="indexing"></a>Indexing
 
-Dengan NumPy, kita juga bisa melakukan _indexing_ dan _slicing_ array dengan mudah. Indexing pada array dimulai dari 0 dan dengan notasi brackets `[]`.
+Dengan NumPy, kita juga bisa melakukan _indexing_ dan _slicing_ array dengan mudah. *Indexing* pada *array* dimulai dari 0 dan dengan notasi *brackets* `[]`.
 
-```
+```python
 array_baru = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 array_baru[0]     # 1
 array_baru[0:4]   # [1, 2, 3, 4]
 ```
 
-## <a name="aritmetika"></a>Aritmetika
+## <a name="aritmetika"></a>Aritmatika
 
 Dengan menggunakan NumPy, kita bisa melakukan operasi seperti penjumlahan, pengurangan, perkalian, pembagian, dan lainnya. Berikut contoh operasi aritmetika pada array.
 
-```
+```python
 arr_A = np.array([1,2,3,4,5])
 arr_B = np.array([2,2,2,2,2])
 
@@ -414,9 +414,9 @@ print("Perpangkatan = ", arr_A ** arr_B)
 
 ## <a name="fungsi_statistik"></a>Fungsi Statistik
 
-NumPy bisa melakukan fungsi statistik seperti menghitung nilai minimal, maksimal, rata-rata, penjumlahan, dan lainnya. Berikut contoh penggunaan fungsi statistik pada array.
+NumPy bisa melakukan fungsi statistik seperti menghitung nilai minimal, maksimal, rata-rata, penjumlahan, dan lainnya. Berikut contoh penggunaan fungsi statistik pada *array*.
 
-```
+```python
 arr = np.array([1,2,3,4,5])
 
 print("Nilai minimal = ", arrku.min())
@@ -430,19 +430,19 @@ print("Standar Deviasi = ", arrku.std())
 
 # <a name="matplotlib"></a>Matplotlib
 
-Visualisasi data merupakan salah satu hal penting untuk mempermudah memahami data. Dalam Python kita bisa dengan mudah melakukan visualisasi data dengan library Matplotlib. `matplotlib.pyplot` adalah kumpulan fungsi yang membuat beberapa perubahan pada gambar, misalnya membuat gambar, membuat area plot dalam gambar, menambah label di plot, dan lainnya.
+Visualisasi data merupakan salah satu hal penting untuk mempermudah memahami data. Dalam Python kita bisa dengan mudah melakukan visualisasi data dengan *library* Matplotlib. `matplotlib.pyplot` adalah kumpulan fungsi yang membuat beberapa perubahan pada gambar, misalnya membuat gambar, membuat area plot dalam gambar, menambah label di plot, dan lainnya.
 
 ## <a name="import_matplotlib"></a>Import Matplotlib
 
-Pada terminal, tuliskan command berikut untuk mendowload library Matplotlib ke komputer kita.
+Pada terminal, tuliskan *command* berikut untuk men-*dowload* *library* Matplotlib ke komputer kita.
 
 ```
 pip install matplotlib
 ```
 
-Untuk menggunakan Matplotlib maka harus melakukan import dan bisa kita memberikan nama yang lebih pendek agar lebih mudah digunakan contohnya `plt` sehingga jika dituliskan dalam program python menjadi
+Untuk menggunakan Matplotlib maka harus melakukan *import* dan bisa kita memberikan nama yang lebih pendek agar lebih mudah digunakan contohnya `plt` sehingga jika dituliskan dalam program Python menjadi:
 
-```
+```python
 import matplotlib.pyplot as plt
 ```
 
@@ -450,14 +450,14 @@ import matplotlib.pyplot as plt
 
 Jika ingin membuat grafik sederhana, kita bisa menggunakan fungsi `plot()` dan `show()`. Berikut contoh membuat grafik sederhana dengan Matplotlib.
 
-```
+```python
 plt.plot([1, 2, 3, 4, 5], [1, 4, 9, 16, 25])
 plt.show()
 ```
 
-Kita juga bisa menambahkan label pada grafik yang telah dibuat yaitu sebagai berikut
+Kita juga bisa menambahkan label pada grafik yang telah dibuat yaitu sebagai berikut:
 
-```
+```python
 plt.plot([1, 2, 3, 4, 5], [1, 4, 9, 16, 25])
 
 plt.ylabel('label Y')
@@ -472,8 +472,8 @@ plt.show()
 
 Histogram adalah bentuk grafik yang menyatakan tabulasi frekuensi dalam bentuk batang. Histogram memudahkan kita untuk memahami ringkasan persebaran data. Berikut contoh membuat histogram dengan Matplotlib yaitu dengan fungsi `hist()`.
 
-```
-x = np.random.normal(170, 10, 250) # np adalah Library NumPy
+```python
+x = np.random.normal(170, 10, 250) # np adalah library NumPy
 plt.hist(x)
 plt.show()
 ```
@@ -482,9 +482,9 @@ plt.show()
 
 ## <a name="scatter_plot"></a>Scatter Plot
 
-Dengan menggunakan Matplotlib kita juga bisa membuat scatter plot. Scatter plot adalah grafik yang menampilkan hubungan antara dua variabel. Berikut contoh membuat scatter plot dengan Matplotlib.
+Dengan menggunakan Matplotlib kita juga bisa membuat *scatter plot*. *Scatter plot* adalah grafik yang menampilkan hubungan antara dua variabel. Berikut contoh membuat *scatter plot* dengan Matplotlib.
 
-```
+```python
 arr_A = np.array([3, 5, 7, 9, 11, 16, 18, 20, 22, 24])
 arr_B = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
@@ -494,9 +494,9 @@ plt.show()
 
 <img src="https://user-images.githubusercontent.com/70510279/193510712-5670f2ad-2179-4059-801f-a564348c5834.png" alt="Scatter Plot" width="300"/>
 
-Kita juga bisa membandingkan dua buah scatter plot contohnya adalah sebagai berikut
+Kita juga bisa membandingkan dua buah *scatter plot* contohnya adalah sebagai berikut
 
-```
+```python
 arr_A = np.array([3, 5, 7, 9, 11, 16, 18, 20, 22, 24])
 arr_B = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 plt.scatter(arr_A, arr_B, color='r')
@@ -511,9 +511,9 @@ plt.show()
 
 ## <a name="bar_plot"></a>Bar Plot
 
-Bar plot atau bar chart adalah jenis plot yang direpresentasikan dengan bar atau batang, dimana panjang bar adalah representasi dari ukuran sebuah fitur atau variabel. Berikut contoh membuat bar plot dengan Matplotlib.
+*Bar plot* atau *bar chart* adalah jenis plot yang direpresentasikan dengan bar atau batang, ketika panjang bar adalah representasi dari ukuran sebuah fitur atau variabel. Berikut contoh membuat *bar plot* dengan Matplotlib.
 
-```
+```python
 matkul = ['dasprog', 'strukdat', 'pweb', 'pbo', 'paa', 'sbd', 'mbd']
 jumlah_mahasiswa = [40, 30, 35, 40, 25, 30, 35]
 
@@ -525,9 +525,9 @@ plt.show()
 
 ## <a name="pie_chart"></a>Pie Chart
 
-Pie chart adalah grafik yang menampilkan data dalam bentuk lingkaran. Berikut contoh membuat pie chart dengan Matplotlib.
+*Pie chart* adalah grafik yang menampilkan data dalam bentuk lingkaran. Berikut contoh membuat *pie chart* dengan Matplotlib.
 
-```
+```python
 matkul = ['dasprog', 'strukdat', 'pweb', 'pbo', 'paa', 'sbd', 'mbd']
 jumlah_mahasiswa = [40, 30, 35, 40, 25, 30, 35]
 
@@ -539,9 +539,9 @@ plt.show()
 
 ## <a name="stacked_bar"></a>Stacked Bar
 
-Stacked bar adalah grafik yang menampilkan data dalam bentuk batang yang saling menumpuk. Berikut contoh membuat stacked bar dengan Matplotlib.
+*Stacked bar* adalah grafik yang menampilkan data dalam bentuk batang yang saling menumpuk. Berikut contoh membuat *stacked bar* dengan Matplotlib.
 
-```
+```python
 kota = ['Jakarta', 'Bandung', 'Surabaya', 'Bali']
 jumlah_pria = [40, 30, 35, 40]
 jumlah_wanita = [25, 30, 35, 20]
@@ -555,9 +555,9 @@ plt.show()
 
 ## <a name="stacked_area"></a>Stacked Area
 
-Stacked area adalah grafik yang menampilkan data dalam bentuk area yang saling menumpuk. Berikut contoh membuat stacked area dengan Matplotlib.
+*Stacked area* adalah grafik yang menampilkan data dalam bentuk area yang saling menumpuk. Berikut contoh membuat *stacked area* dengan Matplotlib.
 
-```
+```python
 kota = ['Jakarta', 'Bandung', 'Surabaya', 'Bali']
 jumlah_pria = [40, 30, 35, 40]
 jumlah_wanita = [25, 30, 35, 20]
@@ -570,9 +570,9 @@ plt.show()
 
 ## <a name="multiple_line"></a>Multiple Line
 
-Multiple line adalah grafik yang menampilkan data dalam bentuk garis yang saling berhubungan. Berikut contoh membuat multiple line dengan Matplotlib.
+*Multiple line* adalah grafik yang menampilkan data dalam bentuk garis yang saling berhubungan. Berikut contoh membuat *multiple line* dengan Matplotlib.
 
-```
+```python
 negara = ['Indonesia', 'Malaysia', 'Singapura', 'Thailand']
 jumlah_penduduk = [250, 150, 100, 200]
 
@@ -585,9 +585,9 @@ plt.show()
 
 ## <a name="multiple_bar"></a>Multiple Bar
 
-Multiple bar adalah grafik yang menampilkan data dalam bentuk batang yang saling berhubungan. Berikut contoh membuat multiple bar dengan Matplotlib.
+*Multiple bar* adalah grafik yang menampilkan data dalam bentuk batang yang saling berhubungan. Berikut contoh membuat *multiple bar* dengan Matplotlib.
 
-```
+```python
 kota = ['Surabaya', 'Jakarta', 'Bandung', 'Bali', 'Medan']
 jumlah_anak = [40, 30, 35, 40, 25]
 jumlah_dewasa = [25, 30, 35, 20, 30]
@@ -608,31 +608,31 @@ plt.show()
 
 # <a name="seaborn"></a>Seaborn
 
-Seaborn adalah library Python yang berfungsi untuk membuat visualisasi data yang lebih menarik. Seaborn memiliki fungsi yang lebih lengkap dibandingkan dengan Matplotlib. Seaborn juga memiliki fungsi untuk membuat statistik deskriptif.
+Seaborn adalah *library* Python yang berfungsi untuk membuat visualisasi data yang lebih menarik. Seaborn memiliki fungsi yang lebih lengkap dibandingkan dengan Matplotlib. Seaborn juga memiliki fungsi untuk membuat statistik deskriptif.
 
 ## <a name="import_seaborn"></a>Import Seaborn
 
-Sebelum menggunakan Seaborn, kita harus mengimport library Seaborn terlebih dahulu. Berikut contoh import Seaborn.
-
-```
-import seaborn as sns
-```
-
-Install Seaborn dengan pip
+Install Seaborn terlebih dahulu dengan pip.
 
 ```
 pip install seaborn
 ```
 
-Lalu kita menggunakan dataset yang sudah disediakan yaitu
+*Import* *library* Seaborn.
+
+```python
+import seaborn as sns
+```
+
+Lalu kita akan menggunakan dataset yang sudah disediakan yaitu:
 
 > <a href="https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Indonesia.csv">Data Vaksinasi Indonesia</a>
 
 ## <a name="seaborn_scatter"></a>Scatter Plot
 
-Scatter plot adalah grafik yang menampilkan data dalam bentuk titik. Berikut contoh membuat scatter plot dengan Seaborn.
+*Scatter plot* adalah grafik yang menampilkan data dalam bentuk titik. Berikut contoh membuat *scatter plot* dengan Seaborn.
 
-```
+```python
 arr_A = np.array([1, 2, 3, 4, 5])
 arr_B = np.array([6, 7, 8, 9, 10])
 
@@ -644,7 +644,7 @@ plt.show()
 
 Jika menggunakan dataset yang sudah disediakan, maka kita bisa menggunakan fungsi `sns.scatterplot()` dengan parameter `x` dan `y` yang diisi dengan nama kolom yang akan ditampilkan.
 
-```
+```python
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
@@ -660,9 +660,9 @@ plt.show()
 
 ## <a name="seaborn_bar"></a>Bar Plot
 
-Seaborn juga memiliki fungsi untuk membuat bar plot. Berikut contoh membuat bar plot dengan Seaborn.
+Seaborn juga memiliki fungsi untuk membuat *bar plot*. Berikut contoh membuat *bar plot* dengan Seaborn.
 
-```
+```python
 arr_A = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 sns.barplot(arr_A)
@@ -673,7 +673,7 @@ plt.show()
 
 Menggunakan dataset yang sudah disediakan, kita bisa menggunakan fungsi `sns.barplot()` dengan parameter `x` dan `y` yang diisi dengan nama kolom yang akan ditampilkan.
 
-```
+```python
 sns.barplot(x=df['date'], y=df['total_vaccinations'])
 plt.show()
 ```
@@ -682,9 +682,9 @@ plt.show()
 
 ## <a name="seaborn_line"></a>Line Plot
 
-Seaborn juga memiliki fungsi untuk membuat line plot. Berikut contoh membuat line plot dengan Seaborn.
+Seaborn juga memiliki fungsi untuk membuat *line plot*. Berikut contoh membuat *line plot* dengan Seaborn.
 
-```
+```python
 arr_A = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 sns.lineplot(arr_A)
@@ -695,16 +695,16 @@ plt.show()
 
 Menggunakan dataset yang sudah disediakan, kita bisa menggunakan fungsi `sns.lineplot()` dengan parameter `x` dan `y` yang diisi dengan nama kolom yang akan ditampilkan.
 
-```
+```python
 sns.lineplot(x=df['date'], y=df['total_vaccinations'])
 plt.show()
 ```
 
 ## <a name="seaborn_box"></a>Box Plot
 
-Box plot adalah grafik yang menampilkan data dalam bentuk kotak. Berikut contoh membuat box plot dengan Seaborn.
+*Box plot* adalah grafik yang menampilkan data dalam bentuk kotak. Berikut contoh membuat *box plot* dengan Seaborn.
 
-```
+```python
 arr_A = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 sns.boxplot(arr_A)
@@ -713,9 +713,9 @@ plt.show()
 
 <img src="https://user-images.githubusercontent.com/70510279/193511809-b6d48bb4-723d-44c1-8352-32207439b5a1.png" alt="Box Plot" width="300"/>
 
-Menampilkan box plot dengan menggunakan dataset yang sudah disediakan.
+Menampilkan *box plot* dengan menggunakan dataset yang sudah disediakan.
 
-```
+```python
 sns.boxplot(x=df['date'], y=df['total_vaccinations'])
 plt.show()
 ```
@@ -724,9 +724,9 @@ plt.show()
 
 ## <a name="seaborn_dist"></a>Distribution Plot
 
-Distribution plot adalah grafik yang menampilkan data dalam bentuk distribusi. Berikut contoh membuat distribution plot dengan Seaborn.
+*Distribution plot* adalah grafik yang menampilkan data dalam bentuk distribusi. Berikut contoh membuat *distribution plot* dengan Seaborn.
 
-```
+```python
 arr_A = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 sns.distplot(arr_A)
@@ -737,7 +737,7 @@ plt.show()
 
 Menggunakan dataset yang sudah disediakan, kita bisa menggunakan fungsi `sns.distplot()` dengan parameter `x` dan `y` yang diisi dengan nama kolom yang akan ditampilkan.
 
-```
+```python
 sns.distplot(df['total_vaccinations'])
 plt.show()
 ```
@@ -746,9 +746,9 @@ plt.show()
 
 ## <a name="seaborn_heatmap"></a>Heatmap
 
-Heatmap adalah grafik yang menampilkan data dalam bentuk warna. Berikut contoh membuat heatmap dengan Seaborn.
+*Heatmap* adalah grafik yang menampilkan data dalam bentuk warna. Berikut contoh membuat *heatmap* dengan Seaborn.
 
-```
+```python
 arr_A = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 
 sns.heatmap(arr_A)
@@ -757,9 +757,9 @@ plt.show()
 
 <img src="https://user-images.githubusercontent.com/70510279/193515873-916af2f7-0374-4f4e-9c80-bd2f54d05456.png" alt="Heatmap" width="300">
 
-Menampilkan heatmap dengan menggunakan dataset yang sudah disediakan.
+Menampilkan *heatmap* dengan menggunakan dataset yang sudah disediakan.
 
-```
+```python
 sns.heatmap(df.corr(), annot=True)
 plt.show()
 ```
