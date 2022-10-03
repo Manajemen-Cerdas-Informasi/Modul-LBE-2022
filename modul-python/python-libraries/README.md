@@ -23,6 +23,7 @@
   - [Sort Data](#sort_data)
   - [Agregasi Data](#agregasi_data)
 - [Numpy](#numpy)
+  - [Import Numpy](#import_numpy)
   - [Array NumPy](#array_numpy)
     - [Zeros()](#array_zeros)
     - [Ones()](#array_ones)
@@ -30,6 +31,19 @@
     - [Linspace()](#array_linspace)
     - [Longspace()](#array_longspace)
   - [Multidimensional Array](#multidimensional_array)
+  - [Indexing](#indexing)
+  - [Fungsi Statistik](#fungsi_statistik)
+- [Matplotlib](#matplotlib)
+  - [Import Matplotlib](#import_matplotlib)
+  - [Grafik Sederhana](#grafik_sederhana)
+  - [Histogram](#histogram)
+  - [Scatter Plot](#scatter_plot)
+  - [Bar Plot](#bar_plot)
+  - [Pie Chart](#pie_chart)
+  - [Stacked Bar Plot](#stacked_bar)
+  - [Stacked Area Plot](#stacked_area)
+  - [Multiple Line](#multiple_line)
+  - [Multiple Bar](#multiple_bar)
 - [Referensi](#referensi)
 
 </br>
@@ -53,6 +67,8 @@ Selanjutnya kita bisa mengunakan text editor apa aja yang ingin digunakan misaln
 ```
 pip3 install --upgrade pip
 ```
+
+Setelah itu, bisa dilanjutkan dengan menginstall extension `Jupyter` pada Visual Studio Code. Setelah itu, buatlah file baru dengan ekstensi `.ipynb` dan bisa langsung kita mulai.
 
 # <a name="pandas"></a>Pandas
 
@@ -236,9 +252,11 @@ Adapun jika ingin menghitung berdasarkan kolomnya maka bisa dilakukan sebagai be
 df.kolom.sum()
 ```
 
-# <a name="numpy"></a>Numpy
+# <a name="numpy"></a>NumPy
 
 NumPy merupakan salah satu library Python yang banyak digunakan dalam proses analisis data karena fiturnya yang hebat. NumPy hampir menyerupai List pada Python tetapi lebih powerful. Ada beberap kelebihan NumPy dibandingkan List seperti size, performance dan functionally. Struktur data NumPy lebih membutuhkan ukuran yang lebih kecil dibandingkan dengan List tetapi mempunyai performa yang lebih cepat.
+
+## <a name="import_numpy"></a>Import NumPy
 
 Pada terminal, tuliskan command berikut untuk mendowload library NumPy ke komputer kita.
 
@@ -308,8 +326,226 @@ Fitur menarik dari NumPy adalah mampu membuat multidimensional array dan melakuk
 np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 ```
 
+## <a name="indexing"></a>Indexing
+
+Dengan NumPy, kita juga bisa melakukan _indexing_ dan _slicing_ array dengan mudah. Indexing pada array dimulai dari 0 dan dengan notasi brackets `[]`.
+
+```
+array_baru = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+array_baru[0]     # 1
+array_baru[0:4]   # [1, 2, 3, 4]
+```
+
+## <a name="aritmetika"></a>Aritmetika
+
+Dengan menggunakan NumPy, kita bisa melakukan operasi seperti penjumlahan, pengurangan, perkalian, pembagian, dan lainnya. Berikut contoh operasi aritmetika pada array.
+
+```
+arr_A = np.array([1,2,3,4,5])
+arr_B = np.array([2,2,2,2,2])
+
+print("Penjumlahan = ", arr_A + arr_B)
+print("Pengurangan = ", arr_A - arr_B)
+print("Perkalian = ", arr_A * arr_B)
+print("Pembagian = ", arr_A / arr_B)
+print("Perpangkatan = ", arr_A ** arr_B)
+```
+
+## <a name="fungsi_statistik"></a>Fungsi Statistik
+
+NumPy bisa melakukan fungsi statistik seperti menghitung nilai minimal, maksimal, rata-rata, penjumlahan, dan lainnya. Berikut contoh penggunaan fungsi statistik pada array.
+
+```
+arr = np.array([1,2,3,4,5])
+
+print("Nilai minimal = ", arrku.min())
+print("Nilai maksimal = ", arrku.max())
+print("Nilai rata-rata = ", arrku.mean())
+print("Total nilai = ", arrku.sum())
+print("Standar Deviasi = ", arrku.std())
+```
+
+# <a name="matplotlib"></a>Matplotlib
+
+Visualisasi data merupakan salah satu hal penting untuk mempermudah memahami data. Dalam Python kita bisa dengan mudah melakukan visualisasi data dengan library Matplotlib. `matplotlib.pyplot` adalah kumpulan fungsi yang membuat beberapa perubahan pada gambar, misalnya membuat gambar, membuat area plot dalam gambar, menambah label di plot, dan lainnya.
+
+## <a name="import_matplotlib"></a>Import Matplotlib
+
+Pada terminal, tuliskan command berikut untuk mendowload library Matplotlib ke komputer kita.
+
+```
+pip install matplotlib
+```
+
+Untuk menggunakan Matplotlib maka harus melakukan import dan bisa kita memberikan nama yang lebih pendek agar lebih mudah digunakan contohnya `plt` sehingga jika dituliskan dalam program python menjadi
+
+```
+import matplotlib.pyplot as plt
+```
+
+## <a name="grafik_sederhana"></a>Grafik Sederhana
+
+Jika ingin membuat grafik sederhana, kita bisa menggunakan fungsi `plot()` dan `show()`. Berikut contoh membuat grafik sederhana dengan Matplotlib.
+
+```
+plt.plot([1, 2, 3, 4, 5], [1, 4, 9, 16, 25])
+plt.show()
+```
+
+Kita juga bisa menambahkan label pada grafik yang telah dibuat yaitu sebagai berikut
+
+```
+plt.plot([1, 2, 3, 4, 5], [1, 4, 9, 16, 25])
+
+plt.ylabel('label Y')
+plt.xlabel('label X')
+
+plt.show()
+```
+
+## <a name="histogram"></a>Histogram
+
+Histogram adalah bentuk grafik yang menyatakan tabulasi frekuensi dalam bentuk batang. Histogram memudahkan kita untuk memahami ringkasan persebaran data. Berikut contoh membuat histogram dengan Matplotlib yaitu dengan fungsi `hist()`.
+
+```
+x = np.random.normal(170, 10, 250) # np adalah Library NumPy
+plt.hist(x)
+plt.show()
+```
+
+## <a name="scatter_plot"></a>Scatter Plot
+
+Dengan menggunakan Matplotlib kita juga bisa membuat scatter plot. Scatter plot adalah grafik yang menampilkan hubungan antara dua variabel. Berikut contoh membuat scatter plot dengan Matplotlib.
+
+```
+arr_A = np.array([3, 5, 7, 9, 11, 16, 18, 20, 22, 24])
+arr_B = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+plt.scatter(arr_A, arr_B)
+plt.show()
+```
+
+Kita juga bisa membandingkan dua buah scatter plot contohnya adalah sebagai berikut
+
+```
+arr_A = np.array([3, 5, 7, 9, 11, 16, 18, 20, 22, 24])
+arr_B = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+plt.scatter(arr_A, arr_B, color='r')
+
+arr_C = np.array([4, 6, 8, 10, 12, 17, 19, 21, 23, 25])
+arr_D = np.array([1, 3, 5, 7, 9, 11, 13, 15, 17, 19])
+plt.scatter(arr_C, arr_D, color='b')
+plt.show()
+```
+
+## <a name="bar_plot"></a>Bar Plot
+
+Bar plot atau bar chart adalah jenis plot yang direpresentasikan dengan bar atau batang, dimana panjang bar adalah representasi dari ukuran sebuah fitur atau variabel. Berikut contoh membuat bar plot dengan Matplotlib.
+
+```
+matkul = ['dasprog', 'strukdat', 'pweb', 'pbo', 'paa', 'sbd', 'mbd']
+jumlah_mahasiswa = [40, 30, 35, 40, 25, 30, 35]
+
+plt.bar(matkul, jumlah_mahasiswa)
+plt.show()
+```
+
+## <a name="pie_chart"></a>Pie Chart
+
+Pie chart adalah grafik yang menampilkan data dalam bentuk lingkaran. Berikut contoh membuat pie chart dengan Matplotlib.
+
+```
+matkul = ['dasprog', 'strukdat', 'pweb', 'pbo', 'paa', 'sbd', 'mbd']
+jumlah_mahasiswa = [40, 30, 35, 40, 25, 30, 35]
+
+plt.pie(jumlah_mahasiswa, labels=matkul)
+plt.show()
+```
+
+## <a name="stacked_bar"></a>Stacked Bar
+
+Stacked bar adalah grafik yang menampilkan data dalam bentuk batang yang saling menumpuk. Berikut contoh membuat stacked bar dengan Matplotlib.
+
+```
+kota = ['Jakarta', 'Bandung', 'Surabaya', 'Bali']
+jumlah_pria = [40, 30, 35, 40]
+jumlah_wanita = [25, 30, 35, 20]
+
+plt.bar(kota, jumlah_pria, color='r')
+plt.bar(kota, jumlah_wanita, bottom=jumlah_pria, color='b')
+plt.show()
+```
+
+## <a name="stacked_area"></a>Stacked Area
+
+Stacked area adalah grafik yang menampilkan data dalam bentuk area yang saling menumpuk. Berikut contoh membuat stacked area dengan Matplotlib.
+
+```
+kota = ['Jakarta', 'Bandung', 'Surabaya', 'Bali']
+jumlah_pria = [40, 30, 35, 40]
+jumlah_wanita = [25, 30, 35, 20]
+
+plt.stackplot(kota, jumlah_pria, jumlah_wanita, colors=['r', 'b'])
+plt.show()
+```
+
+## <a name="multiple_line"></a>Multiple Line
+
+Multiple line adalah grafik yang menampilkan data dalam bentuk garis yang saling berhubungan. Berikut contoh membuat multiple line dengan Matplotlib.
+
+```
+negara = ['Indonesia', 'Malaysia', 'Singapura', 'Thailand']
+jumlah_penduduk = [250, 150, 100, 200]
+
+plt.plot(negara, jumlah_penduduk, color='r')
+plt.plot(negara, jumlah_penduduk, 'ro')
+plt.show()
+```
+
+## <a name="multiple_bar"></a>Multiple Bar
+
+Multiple bar adalah grafik yang menampilkan data dalam bentuk batang yang saling berhubungan. Berikut contoh membuat multiple bar dengan Matplotlib.
+
+```
+kota = ['Surabaya', 'Jakarta', 'Bandung', 'Bali', 'Medan']
+jumlah_anak = [40, 30, 35, 40, 25]
+jumlah_dewasa = [25, 30, 35, 20, 30]
+
+barWidth = 0.25
+r1 = np.arange(len(jumlah_anak))
+r2 = [x + barWidth for x in r1]
+
+plt.bar(r1, jumlah_anak, width=barWidth, color='r', label='anak')
+plt.bar(r2, jumlah_dewasa, width=barWidth, color='b', label='dewasa')
+
+plt.xticks([r + barWidth for r in range(len(jumlah_anak))], kota)
+plt.legend()
+plt.show()
+```
+
 # <a name="referensi"></a>Referensi
 
 - https://hub.idbigdata.com/sigit-prasetyo/panduan-praktis-penggunaan-pandas-bagian-1-39
 - https://hub.idbigdata.com/sigit-prasetyo/panduan-praktis-penggunaan-pandas-bagian-2-40
 - https://ngodingdata.com/tutorial-dasar-numpy-python/
+- https://ngodingdata.com/pengenalan-library-matplotlib/
+- https://www.geeksforgeeks.org/how-to-plot-a-pandas-dataframe-with-matplotlib/
+- https://matplotlib.org/stable/index.html
+- https://www.w3schools.com/python/matplotlib_intro.asp
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
