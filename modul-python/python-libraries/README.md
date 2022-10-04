@@ -239,7 +239,7 @@ Hasilnya yaitu: </br>
 
 ## <a name="menampilkan_kolom"></a>Menampilkan Kolom
 
-Penggunaan Pandas juga bisa dilakukan untuk menampilkan data berdasarkan nama kolom yg diinginkan.
+Penggunaan Pandas juga bisa dilakukan untuk menampilkan data berdasarkan nama kolom yang diinginkan.
 
 ```python
 df[['kolom1', 'kolom2']].head()
