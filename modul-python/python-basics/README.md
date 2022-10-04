@@ -29,7 +29,7 @@
 - [Fungsi](#fungsi)
   - [Parameter Fungsi](#parameter_fungsi)
   - [Variabel Lokal](#variabel-lokal)
-  - [Statemen Global](#statemen_global)
+  - [Statement Global](#statemen_global)
   - [Argumen Default](#argumen_default)
 - [Struktur Data](#struktur_data)
   - [List](#list)
