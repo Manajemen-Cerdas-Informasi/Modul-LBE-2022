@@ -43,7 +43,7 @@ Pada keadaan tertentu, untuk dapat memroses suatu set data, set data tersebut ha
 
 Untuk memastikan bahwa suatu record bersifat konsisten, kita dapat melakukan komparasi suatu record dengan premis yang berlaku atau dengan record lainnya. Seperti contoh, apabila kita memiliki suatu record yang menyatakan bahwa baju dengan harga `Rp10.000` berada di kategori `Mahal`, kita perlu melakukan cross-check kepada record lain dan melihat apakah memang baju berharga `Rp10.000` dikategorikan sebagai `Mahal` dalam set data tersebut. Apabila tidak, kita harus melakukan preprocessing dan memanipulasi data tersebut supaya menjadi benar dan konsisten.
 
-![image](https://user-images.githubusercontent.com/34309557/194706298-59152a93-1d79-4637-be9c-7def3401696b.png)
+<img src="https://user-images.githubusercontent.com/34309557/194706298-59152a93-1d79-4637-be9c-7def3401696b.png" width="300">
 
 
 ## <a name="dp-with-SQL"></a>2. Data Preprocessing with SQL
@@ -111,8 +111,9 @@ SELECT OrderID,
 FROM Sales_Data
 ```
   
-![image](https://user-images.githubusercontent.com/34309557/194706499-310a2a59-e18d-45d0-bcbf-7817db0173de.png)
-
+<img src="https://user-images.githubusercontent.com/34309557/194707030-4683f303-e033-4501-a828-1506ff4bdfd7.png" width="302.25">
+  
+<b>4. Mengategorikan value sesuai dengan interval</b>
 
 ## <a name="referensi"></a>Referensi
 
