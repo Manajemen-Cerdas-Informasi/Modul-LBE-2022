@@ -3,7 +3,7 @@
 - [Data Preprocessing](#data-preprocessing)
   - [Definisi](#definisi)
   - [Keuntungan](#keuntungan)
-- [Data Preprocessing with SQL](#dp-with-SQL))
+- [Data Preprocessing with SQL](#dp-with-SQL)
 - [Referensi](#referensi)
 
 ## <a name="data-preprocessing"></a>1. Data Preprocessing
