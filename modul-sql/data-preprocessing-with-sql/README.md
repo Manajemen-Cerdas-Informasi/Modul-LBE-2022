@@ -56,6 +56,9 @@ FROM Dummy_Sales_Data_v1
 WHERE Product_Category IS NULL
 ```
 
+![image](https://user-images.githubusercontent.com/34309557/194705315-a3915fa7-d2c3-4116-a2a2-29901f2d95f1.png)
+
+
 
 
 
