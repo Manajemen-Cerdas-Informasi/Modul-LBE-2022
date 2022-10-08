@@ -9,8 +9,8 @@ Daftar materi:
    - Python Basics: [Python Basics](https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/tree/main/modul-python/python-basics)
    - Python Libraries: [Python Libraries](https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/tree/main/modul-python/python-libraries)
 2. Pertemuan 2:
-   - SQL Basics: [SQL Basics](https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/tree/main/modul-sql)
-   - Data Preprocessing with SQL: 
+   - SQL Basics: [SQL Basics](https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/tree/main/modul-sql/sql-basics)
+   - Data Preprocessing with SQL: [Data Preprocessing with SQL] (https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/tree/main/modul-sql/data-preprocessing-with-sql)
 3. Pertemuan 3:
    - Tableau: [Tableau](https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/blob/main/modul-tableu/README.md)
 
