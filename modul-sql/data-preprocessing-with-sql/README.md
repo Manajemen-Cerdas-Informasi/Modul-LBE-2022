@@ -1,9 +1,10 @@
-# Modul 2 LBE MCI 2022: Database & SQL
+# Modul 2 LBE MCI 2022: Data Preprocessing
 
 - [Data Preprocessing](#data-preprocessing)
   - [Definisi](#definisi)
   - [Keuntungan](#keuntungan)
 - [Data Preprocessing with SQL](#dp-with-SQL)
+- [Data Preprocessing with Python](#dp-with-python)
 - [Referensi](#referensi)
 
 ## <a name="data-preprocessing"></a>1. Data Preprocessing
@@ -47,7 +48,7 @@ Untuk memastikan bahwa suatu record bersifat konsisten, kita dapat melakukan kom
 
 ## <a name="dp-with-SQL"></a>2. Data Preprocessing with SQL
 
-Data preprocessing dapat dilakukan dengan banyak cara, baik menggunakan python, SQL, pendekatan manual (mengadakan kuesioner kembali) ataupun dengan tools lainnya yang dapat membersihkan set data. Pada kesempatan kali ini, kita akan belajar data preprocessing dengan SQL.
+Data preprocessing dapat dilakukan dengan banyak cara, baik menggunakan python, SQL, pendekatan manual (mengadakan kuesioner kembali) ataupun dengan tools lainnya yang dapat membersihkan set data. Pada section ini, kita akan belajar data preprocessing dengan SQL.
 
 <b>1. Mencari record dengan values yang hilang</b>
 
@@ -110,7 +111,7 @@ SELECT OrderID,
 FROM Sales_Data
 ```
   
-<img src="https://user-images.githubusercontent.com/34309557/194707030-4683f303-e033-4501-a828-1506ff4bdfd7.png" width="302.25">
+<img src="https://user-images.githubusercontent.com/34309557/194707030-4683f303-e033-4501-a828-1506ff4bdfd7.png" width="402.25">
   
 <b>4. Mengategorikan value sesuai dengan interval</b>
   
@@ -144,6 +145,7 @@ FROM Sales_Data
   
 ![image](https://user-images.githubusercontent.com/34309557/194707483-1b26f47e-f4a0-4b61-8dbd-80e5599b96f8.png)
 
+## <a name="dp-with-python"></a>3. Data Preprocessing with Python
 
 ## <a name="referensi"></a>Referensi
 
