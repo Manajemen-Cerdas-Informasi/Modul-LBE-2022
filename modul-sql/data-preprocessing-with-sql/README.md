@@ -3,8 +3,7 @@
 - [Data Preprocessing](#data-preprocessing)
   - [Definisi](#definisi)
   - [Keuntungan](#keuntungan)
-- [Data Preprocessing with SQL](#dp-with-SQL)
-  - [Tentang](#tentang-sql)
+- [Data Preprocessing with SQL](#dp-with-SQL))
 - [Referensi](#referensi)
 
 ## <a name="data-preprocessing"></a>1. Data Preprocessing
@@ -127,7 +126,7 @@ SELECT OrderID,
 FROM Sales_Data
 ```
   
-![image](https://user-images.githubusercontent.com/34309557/194707373-5c1e487f-7c54-428f-ab93-d0d898ede4a7.png)
+![image](https://user-images.githubusercontent.com/34309557/194707629-c0f343d7-a728-41b5-8f8b-3e00110fd253.png)
 
 <b>5. Membenarkan data type</b>
   
