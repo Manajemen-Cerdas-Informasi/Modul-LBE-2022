@@ -25,6 +25,8 @@ Data preprocessing memiliki banyak keuntungan. Beberapa poin penting dalam keleb
 
 Ketika set data terdiri dari kumpulan data yang berasal dari sumber yang berbeda, akan terdapat kemungkinan format data pada kolom yang sama berbeda dengan satu sama lainnya. Hal ini akan mengakibatkan eror apabila data set tersebut ingin diproses atau divisualisasikan karena komputer hanya dapat menerima kumpulan data dalam satu kolom dengan pemformatan yang seragam.
 
+![image](https://user-images.githubusercontent.com/34309557/194706309-96ed1996-0ee8-4060-90c7-f912f0dab835.png)
+
 <b>2. Data Quality</b>
 
 Terkadang, suatu kolom pada set data harus mengikuti aturan yang sesuai dengan keperluan. Seperti data dengan tipe data boolean yang hanya boleh memiliki nilai 0 dan 1 ataupun alamat email yang harus memiliki simbol @ atau . diantara beberapa kata kunci. Ada beberapa kasus yang mana pengguna dapat memasukkan data yang tidak sesuai dengan constraints atau aturan-aturan yang berlaku.
@@ -35,11 +37,14 @@ Permasalahan ril membutuhkan back-up data yang juga bersifat ril. Maka dari itu,
 
 <b>4. Complete Data</b>
 
-Pada keadaan tertentu, untuk dapat memroses suatu set data, set data tersebut harus bersifat komplit. Seperti pada set data yang memiliki keperluan untuk mengontak orang yang terdaftar, maka field untuk nomor telepon tidak boleh kosong. Maka dari itu, data preprocessing juga mengandung proses untuk melengkapi  data, baik dilakukan secara manual (mengontak orang yang bersangkutan/mengadakan pengisian form kembali) ataupun dilakukan secara otomatis oleh suatu intelligent system.
+Pada keadaan tertentu, untuk dapat memroses suatu set data, set data tersebut harus bersifat komplit. Seperti pada set data yang memiliki keperluan untuk mengontak orang yang terdaftar, maka field untuk nomor telepon tidak boleh kosong. Maka dari itu, data preprocessing juga mengandung proses untuk melengkapi data, baik dilakukan secara manual (mengontak orang yang bersangkutan/mengadakan pengisian form kembali) ataupun dilakukan secara otomatis oleh suatu intelligent system.
 
 <b>5. Maintains Data Consistency</b>
 
 Untuk memastikan bahwa suatu record bersifat konsisten, kita dapat melakukan komparasi suatu record dengan premis yang berlaku atau dengan record lainnya. Seperti contoh, apabila kita memiliki suatu record yang menyatakan bahwa baju dengan harga `Rp10.000` berada di kategori `Mahal`, kita perlu melakukan cross-check kepada record lain dan melihat apakah memang baju berharga `Rp10.000` dikategorikan sebagai `Mahal` dalam set data tersebut. Apabila tidak, kita harus melakukan preprocessing dan memanipulasi data tersebut supaya menjadi benar dan konsisten.
+
+![image](https://user-images.githubusercontent.com/34309557/194706298-59152a93-1d79-4637-be9c-7def3401696b.png)
+
 
 ## <a name="dp-with-SQL"></a>2. Data Preprocessing with SQL
 
@@ -91,7 +96,7 @@ FROM Sales_Data
 WHERE Dirty_data=1
 ```
 
-<b>3. Membersihkan kumpulan value terlalu beragam</b>
+<b>3. Membersihkan kumpulan value yang terlalu beragam</b>
 
 Salah satu cara untuk menginterpretasikan suatu set data yang meminiki value-value beragam adalah dengan melakukan standardisasi/pengelompokkan kembali. Pada contoh di bawah ini, kita akan mengelompokkan order-order berdasarkan benuanya.
 
@@ -105,6 +110,9 @@ SELECT OrderID,
        END AS region
 FROM Sales_Data
 ```
+  
+![image](https://user-images.githubusercontent.com/34309557/194706499-310a2a59-e18d-45d0-bcbf-7817db0173de.png)
+
 
 ## <a name="referensi"></a>Referensi
 
