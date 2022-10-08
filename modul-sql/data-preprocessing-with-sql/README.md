@@ -15,17 +15,19 @@ Dalam dunia nyata, programmer akan banyak menemukan set data yang bersifat kotor
 
 <b>Data preprocessing</b> atau data cleaning adalah proses manipulasi, penghapusan, penggantian atau penambalan data kepada set data sehingga set data dapat mengakomodasi pemrosesan data lebiih lanjut. Selain itu, data preprocessing juga memiliki peran penting dalam menyiapkan data-data yang dapat diandalkan dengan menerapkan proses analitik yang sesuai dengan ilmu atau teori yang ada kepada set data yang bersifat kotor.
 
+![image](https://user-images.githubusercontent.com/34309557/194705405-98b45cdc-e505-4d72-b0d2-fe80b3129800.png)
+
 ### <a name="keuntungan">Keuntungan dari data preprocessing
 
 Data preprocessing memiliki banyak keuntungan. Beberapa poin penting dalam kelebihan data preprocessing adalah sebagai berikut
 
 <b>1. Error-Free Data</b>
 
-Ketika set data terdiri dari kumpulan data yang berasal dari sumber yang berbeda, akan terdapat kemungkinan format data pada tiap kolom berbeda dengan satu sama lainnya. Hal ini akan mengakibatkan eror apabila data set tersebut ingin diproses atau divisualisasikan karena komputer hanya dapat menerima kumpulan data dalam satu kolom dengan pemformatan yang seragam.
+Ketika set data terdiri dari kumpulan data yang berasal dari sumber yang berbeda, akan terdapat kemungkinan format data pada kolom yang sama berbeda dengan satu sama lainnya. Hal ini akan mengakibatkan eror apabila data set tersebut ingin diproses atau divisualisasikan karena komputer hanya dapat menerima kumpulan data dalam satu kolom dengan pemformatan yang seragam.
 
 <b>2. Data Quality</b>
 
-Terkadang, suatu kolom pada set data harus mengikuti aturan yang sesuai dengan keperluan. Seperti data dengan tipe data boolean yang hanya boleh memiliki nilai 0 dan 1 ataupun alamat email yang harus memiliki simbol @ atau . diantaranya. Ada beberapa kasus yang mana pengguna dapat memasukkan data yang tidak sesuai dengan constraints atau aturan-aturan tersebut.
+Terkadang, suatu kolom pada set data harus mengikuti aturan yang sesuai dengan keperluan. Seperti data dengan tipe data boolean yang hanya boleh memiliki nilai 0 dan 1 ataupun alamat email yang harus memiliki simbol @ atau . diantara beberapa kata kunci. Ada beberapa kasus yang mana pengguna dapat memasukkan data yang tidak sesuai dengan constraints atau aturan-aturan yang berlaku.
 
 <b>3. Accurate and Efficient</b>
 
@@ -33,11 +35,11 @@ Permasalahan ril membutuhkan back-up data yang juga bersifat ril. Maka dari itu,
 
 <b>4. Complete Data</b>
 
-Pada keadaan tertenru, untuk dapat memroses suatu set data, set data tersebut harus bersifat komplit. Seperti pada set data yang memiliki keperluan untuk mengontak orang yang terdaftar, maka field untuk nomor telepon tidak boleh kosong. Maka dari itu, data preprocessing juga mengandung proses untuk melengkapi  data, baik dilakukan secara manual (mengontak orang yang bersangkutan/mengadakan pengisian form kembali) ataupun dilakukan secara otomatis oleh suatu intelligent system.
+Pada keadaan tertentu, untuk dapat memroses suatu set data, set data tersebut harus bersifat komplit. Seperti pada set data yang memiliki keperluan untuk mengontak orang yang terdaftar, maka field untuk nomor telepon tidak boleh kosong. Maka dari itu, data preprocessing juga mengandung proses untuk melengkapi  data, baik dilakukan secara manual (mengontak orang yang bersangkutan/mengadakan pengisian form kembali) ataupun dilakukan secara otomatis oleh suatu intelligent system.
 
 <b>5. Maintains Data Consistency</b>
 
-Untuk memastikan bahwa suatu record bersifat konsisten, kita dapat melakukan komparasi suatu record dengan konteks ataupun dengan record lainnya. Seperti contoh, apabila kita memiliki suatu record yang menyatakan bahwa baju dengan harga `Rp10.000` berada di kategori `Mahal`, kita perlu melakukan cross-check kepada record lain dan melihat apakah memang baju `Rp10.000` dikategorikan sebagai `Mahal` dalam set data tersebut. Apabila tidak, kita harus melakukan preprocessing dan memanipulasi data tersebut supaya menjadi benar dan konsisten.
+Untuk memastikan bahwa suatu record bersifat konsisten, kita dapat melakukan komparasi suatu record dengan premis yang berlaku atau dengan record lainnya. Seperti contoh, apabila kita memiliki suatu record yang menyatakan bahwa baju dengan harga `Rp10.000` berada di kategori `Mahal`, kita perlu melakukan cross-check kepada record lain dan melihat apakah memang baju berharga `Rp10.000` dikategorikan sebagai `Mahal` dalam set data tersebut. Apabila tidak, kita harus melakukan preprocessing dan memanipulasi data tersebut supaya menjadi benar dan konsisten.
 
 ## <a name="dp-with-SQL"></a>2. Data Preprocessing with SQL
 
@@ -45,23 +47,64 @@ Data preprocessing dapat dilakukan dengan banyak cara, baik menggunakan python, 
 
 <b>1. Mencari record dengan values yang hilang</b>
 
-Cara mencari record yang memiliki nilai null pada suatu field adalah dengan menggunakan sintaks `WHERE <field> IS NULL`. Berikut ini adalah contoh penggunaannya.
+Cara mencari record yang memiliki nilai null pada suatu field adalah dengan menggunakan sintaks `WHERE <column> IS NULL`. Berikut ini adalah contoh penggunaannya.
 
 ```
 SELECT OrderID,
        Sales_Manager,
        Product_Category,
        Shipping_Address
-FROM Dummy_Sales_Data_v1
+FROM Sales_Data
 WHERE Product_Category IS NULL
 ```
 
 ![image](https://user-images.githubusercontent.com/34309557/194705315-a3915fa7-d2c3-4116-a2a2-29901f2d95f1.png)
 
+<b>2. Melakukan flag pada record</b>
 
+Selain dengan kueri di atas, kita juga bisa memberi tanda/flag kepada record-record yang bermasalah. Berikut ini adalah contoh kueri yang akan memberikan flag kepada record yang field `Delivery_Time` sama dengan `NULL`
 
+```
+SELECT OrderID,
+       Sales_Manager,
+       Shipping_Address,
+       Delivery_Time,
+       CASE WHEN Delivery_Time IS NULL THEN 1
+            ELSE 0
+       END AS Dirty_data
+FROM Sales_Data
+```
 
+![image](https://user-images.githubusercontent.com/34309557/194705602-ba9611d1-8d94-4c03-8e5d-522192771c7b.png)
 
+Kueri tersebut akan menghasilkan tabel baru dalam view yang memiliki kolom `Dirty_data`. Hal ini dapat memudahkan pencarian record yang memiliki nilai `NULL` dengan kueri sebagai berikut.
+
+```
+SELECT OrderID,
+       Sales_Manager,
+       Shipping_Address,
+       Delivery_Time,
+       CASE WHEN Delivery_Time IS NULL THEN 1
+            ELSE 0
+       END AS Dirty_data
+FROM Sales_Data
+WHERE Dirty_data=1
+```
+
+<b>3. Membersihkan kumpulan value terlalu beragam</b>
+
+Salah satu cara untuk menginterpretasikan suatu set data yang meminiki value-value beragam adalah dengan melakukan standardisasi/pengelompokkan kembali. Pada contoh di bawah ini, kita akan mengelompokkan order-order berdasarkan benuanya.
+
+```
+SELECT OrderID,
+       Shipping_Address,
+       CASE WHEN Shipping_Address IN ('Germany','UK', 'Italy', 'Austria') THEN 'Europe'
+            WHEN Shipping_Address IN ('Singapore','Japan', 'Indonesia', 'India', 'Thailand') THEN 'Asia'
+            WHEN Shipping_Address IN ('Kenya','South Africa', 'Egypt') THEN 'Africa'
+            ELSE 'Other'
+       END AS region
+FROM Sales_Data
+```
 
 ## <a name="referensi"></a>Referensi
 
