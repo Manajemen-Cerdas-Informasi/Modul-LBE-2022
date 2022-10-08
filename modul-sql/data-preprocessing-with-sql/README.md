@@ -111,9 +111,40 @@ SELECT OrderID,
 FROM Sales_Data
 ```
   
-<img src="https://user-images.githubusercontent.com/34309557/194707030-4683f303-e033-4501-a828-1506ff4bdfd7.png" width="302.25">
+<img src="https://user-images.githubusercontent.com/34309557/194707030-4683f303-e033-4501-a828-1506ff4bdfd7.png" width="602.25">
   
 <b>4. Mengategorikan value sesuai dengan interval</b>
+  
+Cara untuk melakukan interpretasi pada data-data yang berbentuk numerik adalah dengan mengategorikannya berdasarkan interval. Pengategorian tersebut dapat dilakukan menggunakan statement `CASE`.
+
+```
+SELECT OrderID,
+     Shipping_Cost,
+     CASE WHEN Shipping_Cost < 25 THEN 'Low'
+          WHEN Shipping_Cost BETWEEN 25 AND 32 THEN 'Medium'
+          WHEN Shipping_Cost > 32 THEN 'High'
+     END AS cost_range
+FROM Sales_Data
+```
+  
+![image](https://user-images.githubusercontent.com/34309557/194707373-5c1e487f-7c54-428f-ab93-d0d898ede4a7.png)
+
+<b>5. Membenarkan data type</b>
+  
+Pada beberapa kasus, kita harus mengubah tipe data. Biasanya, perubahan tipe data dilakukan dari `FLOAT` ke `INT`. Untuk melakukan pengubahan tipe data, kita akan menggunakan statement `CAST` dengan format sebagai berikut.
+  
+`CAST(column_name AS new_data_type)`
+
+Berikut ini adalah contoh kueri yang menggunakan statement `CASE` tersebut.
+
+```
+SELECT Shipping_Cost,
+       CAST(Shipping_Cost AS REAL) AS Shipping_Cost_float
+FROM Sales_Data
+```
+  
+![image](https://user-images.githubusercontent.com/34309557/194707483-1b26f47e-f4a0-4b61-8dbd-80e5599b96f8.png)
+
 
 ## <a name="referensi"></a>Referensi
 
