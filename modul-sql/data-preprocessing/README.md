@@ -246,7 +246,7 @@ Setelah itu, kita bisa mengganti semua data hingga menjadi London atau Oxford sa
 
 ## <a name="referensi"></a>Latihan
 
-1. Silahkan download data set [berikut.]() Kerjakan menggunakan BigQuery dengan pertama-tama mengimport csv untuk langsung digenerate sebagai tabel pada suatu set data. Setelah itu, lakukan preprocessing dengan SQL sehingga menghasilkan tabel `hotel_bookings` sebagai berikut.
+1. Silahkan download data set [berikut.](https://github.com/Manajemen-Cerdas-Informasi/Modul-LBE-2022/blob/main/modul-sql/data-preprocessing/file/hotel_boookings.csv) Kerjakan menggunakan BigQuery dengan pertama-tama mengimport csv untuk langsung digenerate sebagai tabel pada suatu set data. Setelah itu, lakukan preprocessing dengan SQL sehingga menghasilkan tabel `hotel_bookings` sebagai berikut.
    - Hapus semua data yang bookingnya dicancel
    - Jadikan tipe data `adults` dan `lead_time` integer
    - Hapus kolom is_repeated dan previous_bookings
