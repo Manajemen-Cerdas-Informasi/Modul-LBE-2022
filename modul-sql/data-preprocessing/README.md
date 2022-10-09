@@ -14,6 +14,7 @@
   - [Mencari dan Mengisi Data Hilang](#3-2)
   - [Menghapus data duplikat](#3-3)
   - [Membersihkan format data](#3-4)
+  - [Export Dataset](#3-5)
 - [Latihan](#latihan)
 - [Referensi](#referensi)
 
