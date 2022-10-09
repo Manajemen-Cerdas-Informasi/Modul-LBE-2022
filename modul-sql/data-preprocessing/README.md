@@ -152,17 +152,72 @@ FROM Sales_Data
 
 ## <a name="dp-with-python"></a>3. Data Preprocessing with Python
 
-Data preprocesing menggunakan python lebih mudah dibandingkan dengan SQL karena SQL memiliki keterbatasan sintaks. Sementara itu, python memiliki banyak library yang dapat mengakomodasi data preprocessing dengan panggilan fungsi saja. Pada section ini, akan dibahas data preprocessing dengan python.
+Data preprocesing menggunakan python lebih mudah dibandingkan dengan SQL karena SQL memiliki keterbatasan sintaks. Sementara itu, python memiliki banyak library yang dapat mengakomodasi data preprocessing dengan panggilan fungsi saja. Pada section ini, akan dibahas data preprocessing dengan python menggunakan library pandas. Maka dari itu, pertama-tama kita harus mengimport library terlebih dahulu.
 
-### <a name="2-4">2.1. Import Dataset
+```
+#importing module
+import pandas as pd
+```
+
+### <a name="3-1">3.1. Import Dataset
 
 Sebelum melakukan preprocessing, data set harus dimport ke python terlebih dahulu. Pengimportan dilakukan dengan `read_csv(loc)` yang mana loc diisi dengan lokasi csv di workspace kita. 
 
-### <a name="2-4">2.2. Mencari dan Mengisi Data Hilang
+![image](https://user-images.githubusercontent.com/34309557/194736072-d3c49d6e-0ff8-48e9-9225-2389a733cb7f.png)
+
+### <a name="3-2">3.2. Mencari dan Mengisi Data Hilang
 
 Beberapa fungsi dapat dipanggil untuk memperoleh record-record yang memiliki value null di kolom tertentu.
 
-`pd.merge(right, how='inner', on=None, left_on=None, right_on=None, left_index=False, right_index=False, sort=False, suffixes=('_x', '_y'), copy=True, indicator=False, validate=None)`
+<b>Fungsi isnull()</b>
+
+`data.isnull()`
+
+![image](https://user-images.githubusercontent.com/34309557/194736111-4ade3831-afd5-451f-8c07-a1ab5926f894.png)
+
+Fungsi tersebut mengembalikan nilai boolean pada tiap field yang menyatakan apakah field tersebut null atau tidak.
+
+<b>Fungsi isna().any()</b>
+
+`data.isna().any()`
+
+![image](https://user-images.githubusercontent.com/34309557/194736191-0dc33cdd-a6e4-407c-b4ae-a02b59178600.png)
+
+Fungsi tersebut akan mengembalikan nilai boolean pada tiap kolom yang mengindikasikan apakah kolom tersebut mempunyai value bernilai null atau tidak.
+
+<b>Fungsi isna().sum()</b>
+
+ `data.isna().sum()`
+
+![image](https://user-images.githubusercontent.com/34309557/194736211-4316658c-6219-40a2-8ee8-4b2948842ba4.png)
+
+Fungsi tersebut mengembalikan jumlah data null pada tiap kolom.
+
+<b>isna().any().sum()</b>
+
+`data.isna().any().sum()`
+
+![image](https://user-images.githubusercontent.com/34309557/194736241-f5ee6dda-f06e-47fe-aa77-918180825d5f.png)
+
+Fungsi tersebut akan mengembalikan jumlah data null dari keseluruhan tabel.
+
+<b>Fungsi fillna()</b>
+
+`pd.fillna(value=None, method=None, axis=None, inplace=False, limit=None, downcast=None)`
+
+Fungsi tersebut akan mengisi field yang null dengan `value`. Detil dari setiap atributnya dapat dilihat di [sini](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html)
+
+### <a name="3-3">3.3. Menghapus data duplikat
+
+Untuk menampilkan data duplikat, fungsi ini dapat dipanggil.
+
+`data.duplicated()`
+
+Selanjutnya, untuk menghapus data duplikat, fungsi ini dipanggil.
+
+`data.drop_duplicates(subset=None, keep='first', inplace=False, ignore_index=False)`
+
+Detil setiap atribut bisa dibaca di [sini](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html)
 
 ## <a name="referensi"></a>Referensi
 
