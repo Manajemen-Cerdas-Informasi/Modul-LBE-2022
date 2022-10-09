@@ -10,6 +10,10 @@
   - [Mengategorikan Value Sesuai dengan Interval](#2-4)
   - [Membenarkan Data Type](#2-5)
 - [Data Preprocessing with Python](#dp-with-python)
+  - [Import Dataset](#3-1)
+  - [Mencari dan Mengisi Data Hilang](#3-2)
+  - [Menghapus data duplikat](#3-3)
+  - [Membersihkan format data](#3-4)
 - [Referensi](#referensi)
 
 ## <a name="data-preprocessing"></a>1. Data Preprocessing
@@ -221,7 +225,7 @@ Detil setiap atribut bisa dibaca di [sini](https://pandas.pydata.org/docs/refere
 
 ### <a name="3-4">3.4. Membersihkan format data
   
-Untuk membersihkan format data dalam python, kita bisa menggunakan fungsi `where()`. Pada dasarnya, fungsi `where()` berfingsi mirip dengan if-statement.
+Untuk membersihkan format data dalam python, kita bisa menggunakan fungsi `where()`. Pada dasarnya, fungsi `where()` berfungsi mirip dengan if-statement.
   
 ![image](https://user-images.githubusercontent.com/34309557/194736607-ce2348ab-d64f-4b63-bed0-a485f4bb01bc.png)
 
