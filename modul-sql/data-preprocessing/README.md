@@ -193,7 +193,7 @@ Fungsi tersebut akan mengembalikan nilai boolean pada tiap kolom yang mengindika
 
 Fungsi tersebut mengembalikan jumlah data null pada tiap kolom.
 
-<b>isna().any().sum()</b>
+<b>Fungsi isna().any().sum()</b>
 
 `data.isna().any().sum()`
 
@@ -218,6 +218,26 @@ Selanjutnya, untuk menghapus data duplikat, fungsi ini dipanggil.
 `data.drop_duplicates(subset=None, keep='first', inplace=False, ignore_index=False)`
 
 Detil setiap atribut bisa dibaca di [sini](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html)
+
+### <a name="3-4">3.4. Membersihkan format data
+  
+Untuk membersihkan format data dalam python, kita bisa menggunakan fungsi `where()`. Pada dasarnya, fungsi `where()` berfingsi mirip dengan if-statement.
+  
+![image](https://user-images.githubusercontent.com/34309557/194736607-ce2348ab-d64f-4b63-bed0-a485f4bb01bc.png)
+
+![image](https://user-images.githubusercontent.com/34309557/194736643-4c5707be-ebcb-4115-9786-a93da63a0d7d.png)
+
+Berikut ini adalah contoh apabila kita ingin membersihkan set data yang memiliki ragam data sebagai berikut.
+  
+![image](https://user-images.githubusercontent.com/34309557/194736713-2ef9395a-838a-49fa-82f2-2241f8c2bae9.png)
+
+Pertama-tama, kita harus mengambil referensi berbentuk tabel terhadap record-record yang mengandung string `London` untuk tempat di London dan `Oxford` untuk publikasi di Oxford.
+  
+![image](https://user-images.githubusercontent.com/34309557/194736765-7d8c9cbe-75e8-4c7f-8459-6ffc982dcdf6.png)
+  
+Setelah itu, kita bisa mengganti semua data hingga menjadi London atau Oxford saja. Apabila tidak mengandung keduanya, tempat publikasi akan dibiarkan tetapi tetap akan dirapihkan dengan menggantikan semua `-` dengan spasi.
+  
+![image](https://user-images.githubusercontent.com/34309557/194737215-5a9141b7-3d60-4135-a2db-3e3e0464571e.png)
 
 ## <a name="referensi"></a>Referensi
 
