@@ -14,6 +14,7 @@
   - [Mencari dan Mengisi Data Hilang](#3-2)
   - [Menghapus data duplikat](#3-3)
   - [Membersihkan format data](#3-4)
+- [Latihan](#latihan)
 - [Referensi](#referensi)
 
 ## <a name="data-preprocessing"></a>1. Data Preprocessing
@@ -243,6 +244,14 @@ Setelah itu, kita bisa mengganti semua data hingga menjadi London atau Oxford sa
   
 ![image](https://user-images.githubusercontent.com/34309557/194737215-5a9141b7-3d60-4135-a2db-3e3e0464571e.png)
 
+## <a name="referensi"></a>Latihan
+
+1. Silahkan download data set [berikut.]() Kerjakan menggunakan BigQuery dengan pertama-tama mengimport csv untuk langsung digenerate sebagai tabel pada suatu set data. Setelah itu, lakukan preprocessing dengan SQL sehingga menghasilkan tabel `hotel_bookings` sebagai berikut.
+   - Hapus semua data yang bookingnya dicancel
+   - Jadikan tipe data `adults` dan `lead_time` integer
+   - Hapus kolom is_repeated dan previous_bookings
+   - Lakukan select yang menunjukkan reservasi eksekutif (A, B), bisnis (C, D, E) dan ekonomi (F, G, H).
+  
 ## <a name="referensi"></a>Referensi
 
 - https://www.analyticsvidhya.com/blog/2021/06/data-cleaning-using-pandas/
