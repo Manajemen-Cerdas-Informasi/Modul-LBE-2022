@@ -114,12 +114,12 @@ DDL digunakan untuk mendefinisikan, mengubah, serta menghapus database dan objek
 
 1. <b>CREATE DATASET</b>
 
-   <img src="../modul-sql/img/create_dataset_1.png">
-   <img src="../modul-sql/img/create_dataset_2.png" width="400">
+   <img src="../sql-basics/img/create_dataset_1.png">
+   <img src="../sql-basics/img/create_dataset_2.png" width="400">
 
 2. <b>DELETE DATASET</b>
 
-   <img src="../modul-sql/img/delete_dataset.png">
+   <img src="../sql-basics/img/delete_dataset.png">
 
 ### <a name="ddl-tabel"></a>DDL untuk tabel
 
@@ -223,7 +223,7 @@ DML digunakan untuk memanipulasi data yang ada dalam suatu tabel. Berisi berbaga
    /* Menampilkan data NRP dan Nama dari tabel 'Mahasiswa' */
    ```
 
-   <img src="../modul-sql/img/tanpa_distinct.png" width="150">
+   <img src="../sql-basics/img/tanpa_distinct.png" width="150">
 
    ```SQL
    SELECT DISTINCT
@@ -233,7 +233,7 @@ DML digunakan untuk memanipulasi data yang ada dalam suatu tabel. Berisi berbaga
    /* Menampilkan data Usia dari tabel 'Mahasiswa' secara tunggal */
    ```
 
-   <img src="../modul-sql/img/dengan_distinct.png" width="150">
+   <img src="../sql-basics/img/dengan_distinct.png" width="150">
 
    ```SQL
    SELECT *
@@ -348,21 +348,21 @@ Sebelum mengerjakan, kalian dapat mengunduh dataset <b>Mahasiswa</b> [di sini](h
 
 1. Tampilkan daftar nama dan ukt berdasarkan nominal ukt yang paling mahal!
 
-   <img src="../modul-sql/img/no_1.png" width=300px>
+   <img src="../sql-basics/img/no_1.png" width=300px>
 
 2. Tampilkan daftar nama dan ukt berdasarkan nominal ukt yang paling mahal, jika ada ukt yang sama, urutkan berdasarkan nama mahasiswa secara alfabetikal.
 
-   <img src="../modul-sql/img/no_2.png" width=300px>
+   <img src="../sql-basics/img/no_2.png" width=300px>
 
 3. Hitunglah jumlah mahasiswa yang memiliki ipk >= 3.5 dan berada di semester 8
 
-   <img src="../modul-sql/img/no_3.png" width=200px>
+   <img src="../sql-basics/img/no_3.png" width=200px>
 
 SOAL TANTANGAN!
 
 4. Tampilkan daftar nama, semester dan ipk berdasarkan ipk tertinggi tiap semester. Diurutkan berdasarkan semesternya. Jika ada yang nilainya sama, maka diurutkan berdasarkan alfabet.
 
-   <img src="../modul-sql/img/no_4.png" width=300px>
+   <img src="../sql-basics/img/no_4.png" width=300px>
 
 ## <a name="platform-sql"></a>Platform untuk Latihan
 
