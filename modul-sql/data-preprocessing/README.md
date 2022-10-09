@@ -4,6 +4,11 @@
   - [Definisi](#definisi)
   - [Keuntungan](#keuntungan)
 - [Data Preprocessing with SQL](#dp-with-SQL)
+  - [Mencari Record dengan Values yang Hilang](#2-1)
+  - [Melakukan Flag pada Record](#2-2)
+  - [Membersihkan Kumpulan Value yang Terlalu Beragam](#2-3)
+  - [Mengategorikan Value Sesuai dengan Interval](#2-4)
+  - [Membenarkan Data Type](#2-5)
 - [Data Preprocessing with Python](#dp-with-python)
 - [Referensi](#referensi)
 
@@ -50,7 +55,7 @@ Untuk memastikan bahwa suatu record bersifat konsisten, kita dapat melakukan kom
 
 Data preprocessing dapat dilakukan dengan banyak cara, baik menggunakan python, SQL, pendekatan manual (mengadakan kuesioner kembali) ataupun dengan tools lainnya yang dapat membersihkan set data. Pada section ini, kita akan belajar data preprocessing dengan SQL.
 
-<b>1. Mencari record dengan values yang hilang</b>
+### <a name="2-1">2.1. Mencari Record dengan Values yang Hilang
 
 Cara mencari record yang memiliki nilai null pada suatu field adalah dengan menggunakan sintaks `WHERE <column> IS NULL`. Berikut ini adalah contoh penggunaannya.
 
@@ -65,7 +70,7 @@ WHERE Product_Category IS NULL
 
 ![image](https://user-images.githubusercontent.com/34309557/194705315-a3915fa7-d2c3-4116-a2a2-29901f2d95f1.png)
 
-<b>2. Melakukan flag pada record</b>
+### <a name="2-2">2.2. Melakukan Flag pada Record
 
 Selain dengan kueri di atas, kita juga bisa memberi tanda/flag kepada record-record yang bermasalah. Berikut ini adalah contoh kueri yang akan memberikan flag kepada record yang field `Delivery_Time` sama dengan `NULL`
 
@@ -96,7 +101,7 @@ FROM Sales_Data
 WHERE Dirty_data=1
 ```
 
-<b>3. Membersihkan kumpulan value yang terlalu beragam</b>
+### <a name="2-3">2.3. Membersihkan Kumpulan Value yang Terlalu Beragam
 
 Salah satu cara untuk menginterpretasikan suatu set data yang meminiki value-value beragam adalah dengan melakukan standardisasi/pengelompokkan kembali. Pada contoh di bawah ini, kita akan mengelompokkan order-order berdasarkan benuanya.
 
@@ -113,7 +118,7 @@ FROM Sales_Data
   
 <img src="https://user-images.githubusercontent.com/34309557/194707030-4683f303-e033-4501-a828-1506ff4bdfd7.png" width="402.25">
   
-<b>4. Mengategorikan value sesuai dengan interval</b>
+### <a name="2-4">2.4. Mengategorikan Value Sesuai dengan Interval
   
 Cara untuk melakukan interpretasi pada data-data yang berbentuk numerik adalah dengan mengategorikannya berdasarkan interval. Pengategorian tersebut dapat dilakukan menggunakan statement `CASE`.
 
@@ -129,7 +134,7 @@ FROM Sales_Data
   
 ![image](https://user-images.githubusercontent.com/34309557/194707629-c0f343d7-a728-41b5-8f8b-3e00110fd253.png)
 
-<b>5. Membenarkan data type</b>
+### <a name="2-5">2.5. Membenarkan Data Type
   
 Pada beberapa kasus, kita harus mengubah tipe data. Biasanya, perubahan tipe data dilakukan dari `FLOAT` ke `INT`. Untuk melakukan pengubahan tipe data, kita akan menggunakan statement `CAST` dengan format sebagai berikut.
   
@@ -146,6 +151,18 @@ FROM Sales_Data
 ![image](https://user-images.githubusercontent.com/34309557/194707483-1b26f47e-f4a0-4b61-8dbd-80e5599b96f8.png)
 
 ## <a name="dp-with-python"></a>3. Data Preprocessing with Python
+
+Data preprocesing menggunakan python lebih mudah dibandingkan dengan SQL karena SQL memiliki keterbatasan sintaks. Sementara itu, python memiliki banyak library yang dapat mengakomodasi data preprocessing dengan panggilan fungsi saja. Pada section ini, akan dibahas data preprocessing dengan python.
+
+### <a name="2-4">2.1. Import Dataset
+
+Sebelum melakukan preprocessing, data set harus dimport ke python terlebih dahulu. Pengimportan dilakukan dengan `read_csv(loc)` yang mana loc diisi dengan lokasi csv di workspace kita. 
+
+### <a name="2-4">2.2. Mencari dan Mengisi Data Hilang
+
+Beberapa fungsi dapat dipanggil untuk memperoleh record-record yang memiliki value null di kolom tertentu.
+
+`pd.merge(right, how='inner', on=None, left_on=None, right_on=None, left_index=False, right_index=False, sort=False, suffixes=('_x', '_y'), copy=True, indicator=False, validate=None)`
 
 ## <a name="referensi"></a>Referensi
 
