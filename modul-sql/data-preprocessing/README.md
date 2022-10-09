@@ -3,13 +3,13 @@
 - [Data Preprocessing](#data-preprocessing)
   - [Definisi](#definisi)
   - [Keuntungan](#keuntungan)
-- [Data Preprocessing with SQL](#dp-with-SQL)
+- [Data Preprocessing dengan SQL](#dp-with-SQL)
   - [Mencari Record dengan Values yang Hilang](#2-1)
   - [Melakukan Flag pada Record](#2-2)
   - [Membersihkan Kumpulan Value yang Terlalu Beragam](#2-3)
   - [Mengategorikan Value Sesuai dengan Interval](#2-4)
   - [Membenarkan Data Type](#2-5)
-- [Data Preprocessing with Python](#dp-with-python)
+- [Data Preprocessing dengan Python](#dp-with-python)
   - [Import Dataset](#3-1)
   - [Mencari dan Mengisi Data Hilang](#3-2)
   - [Menghapus data duplikat](#3-3)
@@ -56,7 +56,7 @@ Untuk memastikan bahwa suatu record bersifat konsisten, kita dapat melakukan kom
 <img src="https://user-images.githubusercontent.com/34309557/194706298-59152a93-1d79-4637-be9c-7def3401696b.png" width="600">
 
 
-## <a name="dp-with-SQL"></a>2. Data Preprocessing with SQL
+## <a name="dp-with-SQL"></a>2. Data Preprocessing dengan SQL
 
 Data preprocessing dapat dilakukan dengan banyak cara, baik menggunakan python, SQL, pendekatan manual (mengadakan kuesioner kembali) ataupun dengan tools lainnya yang dapat membersihkan set data. Pada section ini, kita akan belajar data preprocessing dengan SQL.
 
@@ -155,7 +155,7 @@ FROM Sales_Data
   
 ![image](https://user-images.githubusercontent.com/34309557/194707483-1b26f47e-f4a0-4b61-8dbd-80e5599b96f8.png)
 
-## <a name="dp-with-python"></a>3. Data Preprocessing with Python
+## <a name="dp-with-python"></a>3. Data Preprocessing dengan Python
 
 Data preprocesing menggunakan python lebih mudah dibandingkan dengan SQL karena SQL memiliki keterbatasan sintaks. Sementara itu, python memiliki banyak library yang dapat mengakomodasi data preprocessing dengan panggilan fungsi saja. Pada section ini, akan dibahas data preprocessing dengan python menggunakan library pandas. Maka dari itu, pertama-tama kita harus mengimport library terlebih dahulu.
 
