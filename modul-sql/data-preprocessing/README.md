@@ -256,3 +256,4 @@ Setelah itu, kita bisa mengganti semua data hingga menjadi London atau Oxford sa
 
 - https://www.analyticsvidhya.com/blog/2021/06/data-cleaning-using-pandas/
 - https://towardsdatascience.com/5-easy-sql-tricks-to-clean-dirty-data-dc423a0ab3e9
+- https://realpython.com/python-data-cleaning-numpy-pandas/
