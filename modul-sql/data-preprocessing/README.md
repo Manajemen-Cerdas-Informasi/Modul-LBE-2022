@@ -204,7 +204,7 @@ Fungsi tersebut mengembalikan jumlah data null pada tiap kolom.
 
 ![image](https://user-images.githubusercontent.com/34309557/194736241-f5ee6dda-f06e-47fe-aa77-918180825d5f.png)
 
-Fungsi tersebut akan mengembalikan jumlah data null dari keseluruhan tabel.
+Fungsi tersebut akan mengembalikan boolean yang mewakili adanya nilai null dalam keseluruhan tabel
 
 <b>Fungsi fillna()</b>
 
@@ -243,6 +243,12 @@ Pertama-tama, kita harus mengambil referensi berbentuk tabel terhadap record-rec
 Setelah itu, kita bisa mengganti semua data hingga menjadi London atau Oxford saja. Apabila tidak mengandung keduanya, tempat publikasi akan dibiarkan tetapi tetap akan dirapihkan dengan menggantikan semua `-` dengan spasi.
   
 ![image](https://user-images.githubusercontent.com/34309557/194737215-5a9141b7-3d60-4135-a2db-3e3e0464571e.png)
+
+### <a name="3-5">3.5. Export Dataset
+
+Set data yang sudah dilakukan preprocessing dapat di-export dengan menggunakan sintaks sebagai berikut
+
+`data.to_csv('hasil.csv')`
 
 ## <a name="referensi"></a>Latihan
 
