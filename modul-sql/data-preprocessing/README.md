@@ -158,11 +158,12 @@ FROM Sales_Data
 
 ## <a name="dp-with-python"></a>3. Data Preprocessing dengan Python
 
-Data preprocesing menggunakan python lebih mudah dibandingkan dengan SQL karena SQL memiliki keterbatasan sintaks. Sementara itu, python memiliki banyak library yang dapat mengakomodasi data preprocessing dengan panggilan fungsi saja. Pada section ini, akan dibahas data preprocessing dengan python menggunakan library pandas. Maka dari itu, pertama-tama kita harus mengimport library terlebih dahulu.
+Data preprocesing menggunakan python lebih mudah dibandingkan dengan SQL karena SQL memiliki keterbatasan sintaks. Sementara itu, python memiliki banyak library yang dapat mengakomodasi data preprocessing dengan panggilan fungsi saja. Pada section ini, akan dibahas data preprocessing dengan python menggunakan library pandas dan numpy. Maka dari itu, pertama-tama kita harus mengimport library terlebih dahulu.
 
 ```
 #importing module
 import pandas as pd
+import numpy as np
 ```
 
 ### <a name="3-1">3.1. Import Dataset
